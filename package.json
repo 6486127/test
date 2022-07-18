@@ -1,0 +1,19 @@
+{
+  "name": "test-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18AN/test-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/18AN/test-form/issues"
+  },
+  "homepage": "https://github.com/18AN/test-form#readme"
+}
