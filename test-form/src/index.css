@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.css-1x51dt5-MuiInputBase-input-MuiInput-input{
+    width: 275px !important;
+    height: 32px !important;
+}
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root-{
+    width: 45px !important;
+}
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+margin-top: 6px !important;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    background: #F2F2F2;
+}

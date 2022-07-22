@@ -1,0 +1,29 @@
+.form__bodys{
+    padding: 39px 22px 33px 21px;
+    background: white;
+    width: 573px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 750px;
+    display: flex;
+}
+.aside{
+    max-width: 138px;
+    background: #5A61ED;
+}
+.aside__subtitle{
+    font-family: 'PT Sans';
+font-size: 49px;
+line-height: 63px;
+letter-spacing: 0.5px;
+color: #FFFFFF;
+transform: rotate(-90deg);
+margin-top: 435px;
+    width: 208px;
+}
+@media (max-width:500px) {
+    .container{
+        justify-content: center
+    }
+}

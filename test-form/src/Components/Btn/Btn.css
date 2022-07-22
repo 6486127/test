@@ -1,0 +1,16 @@
+.btn{
+    padding: 7px 26px;
+    background: #5A61ED;
+    color: white;
+    border: 0.5px solid #FFFFFF;
+}
+.unactiv{
+    background: rgb(83, 83, 83);
+    padding: 7px 26px;
+    color: white;
+    border: 0.5px solid #FFFFFF;
+}
+.btn:active{
+
+    background-color: aqua;
+}
