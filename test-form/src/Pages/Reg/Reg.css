@@ -1,0 +1,15 @@
+.regTitle{
+    font-size: 22px;
+line-height: 26px;
+letter-spacing: -0.46px;
+
+color: #111111;
+}
+.regsubTitle{
+    font-size: 14px;
+    line-height: 16px;
+    color: #111111;
+}
+.reg__body{
+padding: 253px 0 210px 63px;
+}
