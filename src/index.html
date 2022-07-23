@@ -7,8 +7,97 @@
     <title>Test Form</title>
 </head>
 <body>
-    <h1>Header</h1>
-    <h1>Header</h1>
-    <img src="assets/Circle-blue.svg" alt="">
+    <div class="container">
+        <div class="header" >
+            <div >Sign up</div>
+        </div>
+        <div class="main">
+            <form action="#" class="form" id="form" >
+                <div>
+                    <div class="form__question">New user?</div>
+                    <div class="form__hint">Use the form below to create your account.</div>
+                    <div class="form__container">
+                        <div class="item">
+                            <div class="item__title">First Name</div>
+                            <div class="item__container">
+                                <input id="first-name" name="first-name" class="item__input" type="text">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__title">Last Name</div>
+                            <div class="item__container">
+                                <input id="second-name" name="second-name" class="item__input" type="text">
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="form__container">
+                        <div class="item">
+                            <div class="item__title">Nationality</div>
+                            <div class="select">
+                                <div class="select__item">American</div><img src="./assets/Arrow-black.svg" alt="open">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__title"><span>E-mail</span> </div>
+                            <div class="item__container">
+                                <input id="first-name" name="first-name" class="item__input" type="text">
+                                <img src="./assets/Arrow-blue.svg" alt="valid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__container">
+                        <div class="item">
+                            <div class="item__title">Date of birth</div>
+                            <div class="date">
+                                <div class="date__container day">
+                                    <span>21</span>
+                                    <img src="./assets/Arrow-black.svg" alt="open">
+                                </div>
+                                <div class="date__container mounth">
+                                    <span>December</span>
+                                    <img src="./assets/Arrow-black.svg" alt="open">
+                                </div>
+                                <div class="date__container year">
+                                    <span>1995</span>
+                                <img src="./assets/Arrow-black.svg" alt="open">
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="item">
+                            <div class="item__title">Gender</div>       
+                            <div class="options">
+                                <input id="male" type="radio" name="gender" value="male" class="options__radio">
+                                <label for="male" class="options__label"><span>Male</span></label>
+                                <input id="female" checked type="radio" name="gender" value="female" class="options__radio">
+                                <label for="female" class="options__label"><span>Female</span></label>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="form__container">
+                        <div class="item">
+                            <div class="item__title">Password</div>
+                            <div class="item__container">
+                                <input id="password" name="password" class="item__input" type="password">
+                            </div>   
+                        </div>
+                        <div class="item">
+                            <div class="item__title">Confirm password</div>
+                            <div class="item__container">
+                                <input id="confirm-password" name="confirm-password" class="item__input" type="password">
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="form__container">
+                    <div class="form__link">
+                        Have an account?
+                        <a href="#">Login</a>
+                    </div>
+                    <button class="form__button" type="submit">Complete Signup</button>
+                </div>        
+            </form>
+        </div>
+    </div>
 </body>
 </html>                       

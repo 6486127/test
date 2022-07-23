@@ -7,7 +7,9 @@
 
 /* Убираем внутренние отступы */
 ul[class],
-ol[class] {
+ol[class],
+input,
+button {
   padding: 0;
 }
 
