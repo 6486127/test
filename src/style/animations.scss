@@ -1,0 +1,87 @@
+@keyframes shake {
+    0%{
+        transform: translateX(0em);
+    }
+    25%{
+        transform: translateX(-1em);
+    }
+    50%{
+        transform: translateX(1em);
+    }
+    75%{
+        transform: translateX(-1em);
+    }
+    100%{
+        transform: translateX(0em);
+    }
+}
+
+
+@keyframes appear{
+    0%{
+        transform: translateY(1em);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0em);
+        opacity: 1;
+    }
+}
+
+.appear{
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+.first{
+    animation-delay: 0ms;
+}
+.second{
+    animation-delay: 500ms;
+}
+.third{
+    animation-delay: 1000ms;
+} 
+.fourth{
+    animation-delay: 1500ms;
+} 
+.fifth{
+    animation-delay: 2000ms;
+}
+.sixth{
+    animation-delay: 2500ms;
+} 
+.seventh{
+    animation-delay: 3000ms;
+} 
+.eighth{
+    animation-delay: 3500ms;
+} 
+.ninth{
+    animation-delay: 4000ms;
+} 
+.tenth{
+    animation-delay: 4500ms;
+} 
+.eleventh{
+    animation-delay: 5000ms;
+} 
+.twelfth{
+    animation-delay: 5500ms;
+}
+.shake{
+    animation-name: shake;
+    animation-duration: 500ms;
+}
+
+.opacity{
+    opacity: 1;
+}
+
+.svg{
+    position: absolute;
+    right: 0;
+    bottom: -0.4em;
+    z-index: 0;
+}

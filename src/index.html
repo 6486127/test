@@ -8,95 +8,120 @@
 </head>
 <body>
     <div class="container">
-        <div class="header" >
-            <div >Sign up</div>
-        </div>
-        <div class="main">
-            <form action="#" class="form" id="form" >
-                <div>
-                    <div class="form__question">New user?</div>
-                    <div class="form__hint">Use the form below to create your account.</div>
-                    <div class="form__container">
-                        <div class="item">
-                            <div class="item__title">First Name</div>
-                            <div class="item__container">
-                                <input id="first-name" name="first-name" class="item__input" type="text">
+        <div class="wrapper">
+            <div class="header" >
+                <div >Sign up</div>
+            </div>
+            <div class="main">
+                <form action="#" class="form" id="form" >
+                    <div>
+                        <div class="form__header appear first">New user?</div>
+                        <div class="form__hint appear second">Use the form below to create your account.</div>
+                        <div class="form__container">
+                            <div class="item appear third">
+                                <div class="item__title">First Name</div>
+                                <div class="item__container">
+                                    <input id="first-name" name="first-name" class="item__input" type="text">
+                                </div>
+                            </div>
+                            <div class="item appear fourth">
+                                <div class="item__title">Last Name</div>
+                                <div class="item__container">
+                                    <input id="second-name" name="second-name" class="item__input" type="text">
+                                </div> 
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="item__title">Last Name</div>
-                            <div class="item__container">
-                                <input id="second-name" name="second-name" class="item__input" type="text">
+                        <div class="form__container">
+                            <div class="item appear fifth">
+                                <div class="item__title">Nationality</div>
+                                <div class="select">
+                                    <div id="nationality" class="select__item">American</div><img src="./assets/Arrow-black.svg" alt="open">
+                                </div>
                             </div>
-                            
+                            <div class="item appear sixth">
+                                <div class="item__title"><span>E-mail</span></div>
+                                <div class="item__container">
+                                    <input id="email" name="email" class="item__input check" type="text">
+                                    <img id="valid" src="./assets/Arrow-blue.svg" alt="valid">
+                                </div>
+                                <div class="warning" id="email-warn"></div>
+                            </div>
                         </div>
+                        <div class="form__container">
+                            <div class="item appear seventh">
+                                <div class="item__title">Date of birth</div>
+                                <div class="date">
+                                    <div class="date__container day">
+                                        <span>21</span>
+                                        <img src="./assets/Arrow-black.svg" alt="open">
+                                    </div>
+                                    <div class="date__container mounth">
+                                        <span>December</span>
+                                        <img src="./assets/Arrow-black.svg" alt="open">
+                                    </div>
+                                    <div class="date__container year">
+                                        <span>1995</span>
+                                        <img src="./assets/Arrow-black.svg" alt="open">
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="item appear eighth">
+                                <div class="item__title">Gender</div>       
+                                <div class="options">
+                                    <input id="male" type="radio" name="gender" value="male" class="options__radio">
+                                    <label for="male" class="options__label"><span>Male</span></label>
+                                    <input id="female" checked type="radio" name="gender" value="female" class="options__radio">
+                                    <label for="female" class="options__label"><span>Female</span></label>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="form__container">
+                            <div class="item appear ninth">
+                                <div class="item__title">Password</div>
+                                <div class="item__container">
+                                    <input id="password" name="password" class="item__input check" type="password">
+                                </div>
+                                <div class="warning"></div>   
+                            </div>
+                            <div class="item appear tenth">
+                                <div class="item__title">Confirm password</div>
+                                <div class="item__container">
+                                    <input id="confirm-password" name="confirm-password" class="item__input check" type="password">
+                                </div>
+                                <div class="warning"></div>
+                            </div>
+                        </div>    
                     </div>
                     <div class="form__container">
-                        <div class="item">
-                            <div class="item__title">Nationality</div>
-                            <div class="select">
-                                <div class="select__item">American</div><img src="./assets/Arrow-black.svg" alt="open">
-                            </div>
+                        <div class="form__link appear eleventh">
+                            Have an account?
+                            <a href="#">Login</a>
                         </div>
-                        <div class="item">
-                            <div class="item__title"><span>E-mail</span> </div>
-                            <div class="item__container">
-                                <input id="first-name" name="first-name" class="item__input" type="text">
-                                <img src="./assets/Arrow-blue.svg" alt="valid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form__container">
-                        <div class="item">
-                            <div class="item__title">Date of birth</div>
-                            <div class="date">
-                                <div class="date__container day">
-                                    <span>21</span>
-                                    <img src="./assets/Arrow-black.svg" alt="open">
-                                </div>
-                                <div class="date__container mounth">
-                                    <span>December</span>
-                                    <img src="./assets/Arrow-black.svg" alt="open">
-                                </div>
-                                <div class="date__container year">
-                                    <span>1995</span>
-                                <img src="./assets/Arrow-black.svg" alt="open">
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="item">
-                            <div class="item__title">Gender</div>       
-                            <div class="options">
-                                <input id="male" type="radio" name="gender" value="male" class="options__radio">
-                                <label for="male" class="options__label"><span>Male</span></label>
-                                <input id="female" checked type="radio" name="gender" value="female" class="options__radio">
-                                <label for="female" class="options__label"><span>Female</span></label>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="form__container">
-                        <div class="item">
-                            <div class="item__title">Password</div>
-                            <div class="item__container">
-                                <input id="password" name="password" class="item__input" type="password">
-                            </div>   
-                        </div>
-                        <div class="item">
-                            <div class="item__title">Confirm password</div>
-                            <div class="item__container">
-                                <input id="confirm-password" name="confirm-password" class="item__input" type="password">
-                            </div>
-                        </div>
-                    </div>    
-                </div>
-                <div class="form__container">
-                    <div class="form__link">
+                        <button class="form__button appear twelfth" type="submit">Complete Signup</button>
+                    </div>        
+                </form>
+            </div>
+            <div id="svg" class="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" maxWidth="307" height="355" viewBox="0 0 307 355" fill="none" style class>
+                    <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" style="fill: none; stroke: #F9FAFF; stroke-width: 5px" clip-rule="evenodd" d="M205.5 411C92.236 411 0 318.764 0 205.5C0 92.236 92.236 0 205.5 0C318.764 0 411 92.236 411 205.5C411 271.362 379.812 330.113 331.438 367.754C333.781 365.394 335.295 362.201 335.521 358.578C336 354.751 336 351.881 336 348.533V343.749C335.879 337.683 335.35 331.725 334.44 325.901C363.927 294.343 382 251.99 382 205.5C382 108.186 302.814 29 205.5 29C108.186 29 29 108.186 29 205.5C29 252.377 47.3746 295.047 77.2988 326.686C76.282 333.801 75.8485 341.1 76.0469 348.533C76.0469 351.403 76.0469 354.751 76.5256 358.578C77.0044 366.71 83.7067 372.451 91.8452 371.972C99.9836 371.494 105.728 364.797 105.25 356.665C104.892 354.163 104.802 352.196 104.779 350.363C133.361 370.298 168.091 382 205.5 382C243.357 382 278.471 370.016 307.247 349.643C307.207 350.468 307.131 351.336 307.053 352.232C306.928 353.664 306.797 355.164 306.797 356.665C306.318 364.318 312.063 371.494 320.202 371.972H321.159C323.791 371.972 326.253 371.294 328.371 370.094C294.07 395.773 251.521 411 205.5 411ZM307.247 349.643C317.103 342.665 326.215 334.703 334.44 325.901C324.506 262.367 269.17 214.712 203.39 216.027C138.589 217.313 86.0983 265.111 77.2988 326.686C85.6155 335.48 94.8243 343.421 104.779 350.363C104.771 349.743 104.771 349.138 104.771 348.533V344.227C105.728 288.259 152.166 243.771 208.178 245.207C264.19 246.163 308.712 292.564 307.276 348.533C307.276 348.892 307.265 349.263 307.247 349.643ZM328.371 370.094C329.401 369.324 330.423 368.543 331.438 367.754C330.531 368.667 329.5 369.455 328.371 370.094ZM147 142.5C147 174.339 172.661 200 204.5 200C236.339 200 262 174.339 262 142.5C262 110.661 236.339 85 204.5 85C172.661 85 147 110.661 147 142.5ZM205.5 114C189.057 114 176 127.057 176 143.5C176 159.943 189.057 173 205.5 173C221.943 173 235 159.943 235 143.5C235 127.057 221.943 114 205.5 114Z" class="LINenIOe_0"/>
+                    <style data-made-with="vivus-instant">
+                        .LINenIOe_0{stroke-dasharray:3811 3813;stroke-dashoffset:3812;animation:LINenIOe_draw 6500ms ease-in 0ms forwards;}@keyframes LINenIOe_draw{100%{stroke-dashoffset:0;}}@keyframes LINenIOe_fade{0%{stroke-opacity:1;}96.26168224299066%{stroke-opacity:1;}100%{stroke-opacity:0;}}
+                    </style>
+                </svg>
+            </div>
+        </div>        
+        <div class="popup">
+                <div class="popup__header"><div>Sign up</div></div>
+                <div class="popup-main">
+                    <div class="popup-main__container">
+                        <div class="popup-main__header">Thank You</div>
+                        <div class="popup-main__text">you registered!</div>
+                    </div> 
+                     <div class="popup-main__link">
                         Have an account?
                         <a href="#">Login</a>
                     </div>
-                    <button class="form__button" type="submit">Complete Signup</button>
-                </div>        
-            </form>
+                </div>
         </div>
     </div>
 </body>

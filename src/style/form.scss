@@ -7,16 +7,18 @@
     font-family: 'WorkSans-Regular', sans-serif;
 }
 
-.form__question{
+.form__header{
     font-family: 'WorkSans-Medium', sans-serif;
     font-size: 1.57em;
     line-height: 1.18em;
+    opacity: 0;
 }
 
 .form__hint{
     font-family: 'WorkSans-Light', sans-serif;
     line-height: 1.14em;
     margin-bottom: 1.3em;
+    opacity: 0;
 }
 
 .form__container{
@@ -37,10 +39,12 @@
     cursor: pointer;
     color: $white;
     letter-spacing: .02em;
+    opacity: 0;
 }
 
 .form__link{
     font-size: 0.92em;
     font-family: 'WorkSans-Light', sans-serif;
     line-height: 1.07;
+    opacity: 0;
 }

@@ -1,6 +1,7 @@
 .item{
     min-width: 47.7%;
     margin-bottom: 1.03em;
+    opacity: 0;
     &__title{
         font-size: 0.85em;
         font-family: 'WorkSans-Light', sans-serif;
@@ -17,9 +18,9 @@
     }
     &__input{
         outline: none;
-    padding-bottom: 0.3em;
-    line-height: 1.14em;
-    min-width: 12em;
-    border: none;
+        padding-bottom: 0.3em;
+        line-height: 1.14em;
+        min-width: 12em;
+        border: none;
     }
 }
