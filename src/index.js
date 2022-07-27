@@ -1,4 +1,6 @@
+"use strict"
 //All JS modules and functions put here
+
 
 import './index.html';
 import './index.scss';
