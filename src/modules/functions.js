@@ -63,7 +63,6 @@ export function formValidate(){
         let input = formCheck[i];
         removeError(input);
         
-        //Checking email input
         if(input.id === 'email'){
             if(testEmail(input)){
                 hideImage();
@@ -75,7 +74,6 @@ export function formValidate(){
                 emailWarning.textContent='';
             }
         }
-        //Checking password and repeat password inputs
         else{
             passwordElements.push(input);
             passwords.push(input.value);
