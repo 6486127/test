@@ -23,7 +23,7 @@ setTimeout(() => {
 popup.addEventListener('click', hidePopup);
 
 form.addEventListener('submit', formSend);
-async function formSend(e){
+function formSend(e){
     e.preventDefault();
     let valid = formValidate();
 
