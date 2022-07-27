@@ -1,0 +1,310 @@
+@import _fonts, _reset,_variables,_animation
+html,body
+	width: 100%
+	height: 100%
+body
+	background: $bg-color
+	color: $text-color
+
+// Styling container
+.container
+	display: flex
+	width: 100%
+	height: 100%
+	justify-content: center
+	margin: 0 auto
+	padding: 0 10px
+	align-items: center
+	position: relative
+	max-width: 800px
+
+// Styling title
+.title
+	font-size: $font-xl
+	position: absolute
+	bottom: 79px
+	right: -54px
+	color: #fff
+	transform: rotate(-90deg)
+	letter-spacing: 0.5px
+	font-family: 'PT Sans'
+	width: 180px
+	&-wrapper
+		position: relative
+		width: 137px
+		background: $primary-color
+
+// Styling alert
+.alert
+	color: #5f2120
+	background: #fddfdf
+	position: absolute
+	width: 100%
+	top: 5%
+	padding: 14px 20px
+	padding-left: 40px
+	z-index: 99
+	border-radius: 4px
+	opacity: 0
+	&-icon
+		width: 24px
+		height: 24px
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		left: 10px
+		fill: #ef5350
+
+	&-title
+		font-weight: 500
+		margin-bottom: 6px
+		font-size: 18px
+	&-message
+		font-weight: 300
+		letter-spacing: 0.1px
+
+// Styling login text & link
+.login
+	&-text
+		font-weight: 300
+	&-link
+		font-weight: 500
+		text-decoration: underline
+// Styling form
+.form
+	max-width: 485px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	width: 100%
+	margin: 38px 22px 33px 21px
+	min-height: 409px
+	&-wrapper
+		display: flex
+		background: #fff
+		width: 100%
+		max-width: 665px
+		position: relative
+		overflow: hidden
+		z-index: 0
+	&-title
+		font-size: $font-l
+		font-weight: 500
+		letter-spacing: -0.46px
+	&-subtitle
+		font-size: $font-m
+		font-weight: 300
+		margin-bottom: 20px
+	&-inner
+		display: flex
+		flex-wrap: wrap
+		gap: 14px
+		justify-content: space-between
+
+	// Styling form item
+	&-item
+		min-width: calc(485px / 2) - 7px
+		display: flex
+		flex-direction: column
+		margin-bottom: 3px
+		position: relative
+		&.valid::after
+			width: 8px
+			height: 10px
+			background: #fff url('../assets/check.svg')
+			position: absolute
+			right: 0px
+			bottom: 50%
+			transform: translateY(100%)
+			content: ""
+			display: block
+			transition: .2s ease-in
+
+	&-label
+		color: $light-text-color
+		font-size: $font-xs
+		font-weight: 300
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+	&-input
+		border: 0
+		border-bottom: 1px solid #f2f2f2
+		height: 27px
+		outline: transparent
+		font-size: $font-m
+		background: transparent
+	&-bottom
+		margin-top: 95px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: $font-s
+
+	// Styling form button
+	&-button
+		background: $primary-color
+		color: #fff
+		border: none
+		padding: 7px 26px
+		font-size: $font-m
+		font-family: 'PT Sans'
+		cursor: pointer
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+	// Styling form background image
+	&-image
+		position: absolute
+		bottom: -55px
+		right: -100px
+		width: 410px
+		height: 410px
+		z-index: -1
+// Styling select
+.select
+	position: relative
+	&-placeholder
+		font-size: $font-m
+		position: relative
+		border-bottom: 1px solid #f2f2f2
+		height: 27px
+		cursor: pointer
+		padding-right: 30px
+		display: flex
+		align-items: center
+		min-width: 50px
+		&.open::after
+			transform: translateY(50%) rotate(180deg)
+		&::after
+			width: 8px
+			height: 5px
+			background: url('../assets/shevron-down.svg') no-repeat
+			position: absolute
+			right: 0px
+			bottom: 50%
+			transform: translateY(50%)
+			content: ""
+			display: block
+			transition: .2s ease-in
+	&-list
+		position: absolute
+		top: 100%
+		left: 0
+		display: flex
+		flex-direction: column
+		min-width: 100%
+		background: #fff
+		overflow-x: hidden
+		overflow-y: auto
+		z-index: 999
+		margin: 0
+		padding: 0
+		scrollbar-width: thin
+		overscroll-behavior: contain
+		text-align: center
+		max-height: 140px
+		&::-webkit-scrollbar
+			width: 5px
+			padding: 5px
+		&::-webkit-scrollbar-thumb
+			background-color: #7C7C7C
+	&-group
+		display: flex
+		position: relative
+		justify-content: space-between
+	&-item
+		cursor: pointer
+		padding: 6px 12px
+		font-size: $font-m
+		&:hover
+			background-color: #f2f2f2
+
+// Styling radio button
+.radio-group
+	display: flex
+	align-items: center
+	height: 27px
+	label
+		font-size: $font-m
+		color: $text-color
+		font-weight: 400
+		margin-right: 20px
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked)
+	position: absolute
+	left: -9999px
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before
+	content: ""
+	position: absolute
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+	width: 10px
+	height: 10px
+	border: 1px solid $primary-color
+	background-color: #ffffff
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before
+	border-radius: 100%
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after
+	content: ""
+	position: absolute
+	left: 3px
+	top: 50%
+	transform: translateY(-50%)
+	width: 6px
+	height: 6px
+	border-radius: 100%
+	background-color: $primary-color
+input[type="radio"]:checked + label:after
+	opacity: 1
+input[type="radio"]:not(:checked) + label:after
+	opacity: 0
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label,
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label
+	display: inline-block
+	position: relative
+	padding-left: 19px
+	cursor: pointer
+
+// Styling password input
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear
+	display: none
+
+input[type=password]
+	font-size: 35px
+	height: 19px
+	margin-top: 8px
+	padding-left: 3px
+	margin-left: -1px
+	max-width: calc(485px / 2) - 7px
+.password-mask
+	position: absolute
+	font-size: 30px
+	font-family: "PT Sans"
+	letter-spacing: -3px
+	bottom: 4px
+	margin-left: -2px
+	height: 18px
+	line-height: 15px
+	max-width: 100%
+	background: #fff
+	z-index: 1
+	padding-right: 1px
+	overflow: hidden
+
+// Styling error
+.error
+	label,input,span,div
+		color: $danger-color
+	input,.select-placeholder
+		border-bottom: 2px solid $danger-color !important
+.hidden
+	display: none
+@import _media

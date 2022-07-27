@@ -1,0 +1,96 @@
+.bg_0
+  stroke-dasharray: 1201 1203
+  stroke-dashoffset: 1202
+  animation: bg_draw 2000ms linear 0ms forwards
+.bg_1
+  stroke-dasharray: 723 725
+  stroke-dashoffset: 724
+  animation: bg_draw 1000ms linear 144ms forwards
+.bg_2
+  stroke-dasharray: 271 273
+  stroke-dashoffset: 272
+  animation: bg_draw 1000ms linear 288ms forwards
+.bg_3
+  stroke-dasharray: 1295 1297
+  stroke-dashoffset: 1296
+  animation: bg_draw 1000ms linear 433ms forwards
+
+.fade-1
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease 0s forwards
+.fade-2
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease .3s forwards
+.fade-3
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease .6s forwards
+.fade-4
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease .9s forwards
+.fade-5
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease 1.2s forwards
+.fade-6
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease 1.5s forwards
+.fade-7
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease 1.8s forwards
+.fade-8
+  opacity: 0
+  pointer-events: none
+  animation: fade .5s ease 2.1s forwards
+
+.button-error
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+
+.alert-show
+  animation: alert 4s cubic-bezier(.36,.07,.19,.97)
+
+@keyframes shake
+  10%, 90%
+    transform: translate3d(-1px, 0, 0)
+
+  20%, 80%
+    transform: translate3d(2px, 0, 0)
+
+  30%, 50%, 70%
+    transform: translate3d(-4px, 0, 0)
+
+  40%, 60%
+    transform: translate3d(4px, 0, 0)
+@keyframes alert
+  0%
+    opacity: 0
+  10%
+    opacity: 1
+  90%
+    opacity: 1
+  100%
+    opacity: 0
+@keyframes bg_draw
+  100%
+    stroke-dashoffset: 0
+
+@keyframes bg_fade
+  0%
+    stroke-opacity: 1
+
+  90%
+    stroke-opacity: 1
+
+  100%
+    stroke-opacity: 0
+@keyframes fade
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
