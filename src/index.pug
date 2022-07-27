@@ -1,0 +1,143 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Sign Up
+    link(rel='stylesheet', href='css/style.css')
+  body 
+    .container 
+      .alert
+        svg.alert-icon(
+          focusable='false',
+          aria-hidden='true',
+          viewbox='0 0 24 24'
+        )
+          path(
+            d='M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'
+          )
+        h3.alert-title Error
+        p.alert-message 
+      .form-wrapper
+        .title-wrapper
+          h2.title Sign up
+        form.form
+          h3.form-title New user?
+          p.form-subtitle
+            | Use the form below to create your account.
+          .form-inner
+            .form-item.fade-1
+              label.form-label(for='first-name') First Name
+              input#first-name.form-input(type='text', name='first-name')
+            .form-item.fade-2
+              label.form-label(for='last-name') Last Name
+              input#last-name.form-input(type='text', name='last-name')
+            .form-item.fade-3
+              label.form-label Nationality
+              .form-select.select
+                input#nationality.hidden(type='text', name='nationality')
+                .select-placeholder Nationality
+                ul.select-list.hidden
+                  include ./utils/nationality.pug
+                  each item in nationality
+                    li.select-item= item
+            .form-item.fade-4
+              label.form-label(for='email') E-mail
+              input#email.form-input(type='email', name='email')
+            .form-item.fade-5
+              label.form-label Date of Birth
+              .select-group
+                .form-select.select
+                  input#day.hidden(
+                    type='text',
+                    name='day',
+                    value=new Date().getDate()
+                  )
+                  .select-placeholder= new Date().getDate()
+                  ul.select-list.hidden
+                    - for (let x = 1; x <= 31; x++)
+                      li.select-item= x
+                .form-select.select
+                  include ./utils/months.pug
+                  input#month.hidden(
+                    type='text',
+                    name='month',
+                    value=months[new Date().getMonth()]
+                  )
+                  .select-placeholder= months[new Date().getMonth()]
+                  ul.select-list.hidden
+                    each item in months
+                      li.select-item= item
+                .form-select.select
+                  input#year.hidden(
+                    type='text',
+                    name='year',
+                    value=new Date().getFullYear()
+                  )
+                  .select-placeholder= new Date().getFullYear()
+                  ul.select-list.hidden
+                    - for (let x = 1950; x <= new Date().getFullYear(); x++)
+                      li.select-item= x
+            .form-item.fade-6
+              label.form-label Gender
+              .radio-group
+                input#male.form-input(
+                  type='radio',
+                  value='Male',
+                  checked,
+                  name='gender'
+                )
+                label.form-label(for='male') Male
+                input#female.form-input(
+                  type='radio',
+                  value='Female',
+                  name='gender'
+                )
+                label.form-label(for='female') Female
+            .form-item.fade-7
+              label.form-label Password
+              label.password-mask(for='password')
+              input#password.form-input(type='password', name='password')
+            .form-item.fade-8
+              label.form-label Confirm Password
+              label.password-mask(for='confirm-password')
+              input#confirm-password.form-input(
+                type='password',
+                name='confirm-password'
+              )
+          .form-bottom
+            p.login-text
+              | Have an account?&nbsp;
+              a.login-link(href='#') Login
+            button.form-button Complete Signup
+          svg.form-image(
+            width='412',
+            height='412',
+            viewbox='0 0 412 412',
+            fill='none',
+            xmlns='http://www.w3.org/2000/svg'
+          )
+            g(clip-path='url(#clip0_11322_52)')
+              path.bg_0(
+                d='M397 206C397 311.486 311.486 397 206 397C100.514 397 15 311.486 15 206C15 100.514 100.514 15 206 15C311.486 15 397 100.514 397 206Z',
+                stroke='#F9FAFF',
+                stroke-width='30'
+              )
+              path.bg_1(
+                d='M322 345.5C322 408.628 270.398 460 206.5 460C142.602 460 91 408.628 91 345.5C91 282.372 142.602 231 206.5 231C270.398 231 322 282.372 322 345.5Z',
+                stroke='#F9FAFF',
+                stroke-width='30'
+              )
+              path.bg_2(
+                stroke='#F9FAFF',
+                stroke-width='30',
+                d='M163,148A43,43 0,1,1 249,148A43,43 0,1,1 163,148'
+              )
+            defs
+              clippath#clip0_11322_52
+                path.bg_3(
+                  fill='white',
+                  d='M 206,0 L 206,0 A 206,206,0,0,1,412,206 L 412,206 A 206,206,0,0,1,206,412 L 206,412 A 206,206,0,0,1,0,206 L 0,206 A 206,206,0,0,1,206,0'
+                )
+    script(src='js/main.min.js')
