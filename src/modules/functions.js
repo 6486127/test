@@ -1,3 +1,4 @@
+"use strict"
 import { button, emailWarning, image, popup, wrapper } from "./consts";
 import { passwordRegEx, emailRegEx, mismatch, uncorrect, wrongEmail } from "./strings";
 
