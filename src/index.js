@@ -1,6 +1,4 @@
 "use strict"
-//All JS modules and functions put here
-
 
 import './index.html';
 import './index.scss';
@@ -22,11 +20,10 @@ setTimeout(() => {
     button.classList.remove('appear','twelfth');
 }, 6500);
 
-
 popup.addEventListener('click', hidePopup);
 
 form.addEventListener('submit', formSend);
-function formSend(e){
+async function formSend(e){
     e.preventDefault();
     let valid = formValidate();
 
