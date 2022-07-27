@@ -1,21 +1,21 @@
 import { button, emailWarning, image, popup, wrapper } from "./consts";
 import { passwordRegEx, emailRegEx, mismatch, uncorrect, wrongEmail } from "./strings";
 
-export function addError(input){
+function addError(input){
     input.parentElement.classList.add('error');
 }
 
-export function removeError(input){
+function removeError(input){
     input.parentElement.classList.remove('error');
 }
 
-export function testEmail(input){
+function testEmail(input){
     return !emailRegEx.test(input.value);
 }
-export function testPassword(input){
+function testPassword(input){
     return !passwordRegEx.test(input.value);
 }
-export function compare(array){
+function compare(array){
     let r =(array[0] === array[1]);
     return !r ;
 }
@@ -35,13 +35,21 @@ export function hidePopup(){
     popup.classList.remove('show');
     wrapper.classList.remove('hide');
 }
+
+function showImage(){
+    image.classList.add('block');
+}
+
+function hideImage(){
+    image.classList.remove('block');
+}
     
-export function shake(){
+function shake(){
     button.classList.add('shake');
     setTimeout(()=>{removeShake()},500);
     
 }
-export function removeShake(){
+function removeShake(){
     button.classList.remove('shake');
 }
 
@@ -58,12 +66,12 @@ export function formValidate(){
         //Checking email input
         if(input.id === 'email'){
             if(testEmail(input)){
-                image.remove();
+                hideImage();
                 emailWarning.textContent = wrongEmail;
                 addError(input);
                 error++;
             }else{
-                input.parentElement.append(image);
+                showImage();
                 emailWarning.textContent='';
             }
         }
