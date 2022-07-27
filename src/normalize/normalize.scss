@@ -19,7 +19,15 @@ h1,
 h2,
 h3,
 h4,
-p{
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
