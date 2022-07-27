@@ -86,8 +86,7 @@ export function formValidate(){
             }else{
                 input.closest('.item').lastElementChild.textContent='';
                 if(passwords.length === 2){
-                    let result = compare(passwords);
-                    if(result){
+                    if(compare(passwords)){
                         passwordElements.forEach(input => {
                             input.closest('.item').lastElementChild.textContent = mismatch;
                             addError(input);

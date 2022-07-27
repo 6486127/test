@@ -41,7 +41,6 @@ function formSend(e){
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             })
-            .then((response) => response.json())
             .then(()=>showPopup())
             .then(()=>form.reset())
             .catch((error)=>console.log(error))
