@@ -1,4 +1,5 @@
 import { dateAssemble } from "./functions";
+
 export const form = document.getElementById('form');
 export const nationality = document.getElementById('nationality').textContent;
 export const day = document.querySelector('.day');
