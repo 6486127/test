@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content: end;
+    font-size: 3.06em;
+    font-family: 'PTSans-Regular', 'Arial', sans-serif;
+    width: 3.58em;
+    padding-bottom: 0.44em;
+    background-color: $blue;
+    color: $white;
+    z-index: 1;
+    & > div{
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+}
