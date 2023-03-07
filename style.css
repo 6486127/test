@@ -1,0 +1,367 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+}
+p {
+	margin: 0;
+}
+@-webkit-keyframes animate-svg-fill-1 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(249, 250, 255);
+	}
+}
+
+@keyframes animate-svg-fill-1 {
+	0% {
+		fill: transparent;
+	}
+
+	100% {
+		fill: rgb(249, 250, 255);
+	}
+}
+
+.svg-elem-1 {
+	-webkit-animation: animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+	animation: animate-svg-fill-1 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s both;
+}
+
+
+
+.signup {
+	padding: 60px;
+	background: #F4F5FC;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.signup__box {
+	max-width: 665px;
+	max-height: 481px;
+	background: #fff;
+	display: flex;
+	overflow: hidden;
+}
+
+.signup__title-form {
+	box-sizing: border-box;
+	background: #5A61ED;
+	transform: rotate(180deg);
+	writing-mode: vertical-lr;
+	min-height: 481px;
+	min-width: 138px;
+	margin: 0;
+	padding: 22.5px 0 0 6.5px;
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 49px;
+	line-height: 63px;
+	letter-spacing: 0.5px;
+	color: #FFFFFF;
+	z-index: 2;
+}
+
+.signup__user {
+	width: 100%;
+	padding: 39px 22px 33px 21px;
+	position: relative;
+}
+
+.signup__title {
+	margin: 0;
+	font-family: 'Work Sans';
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: -0.46px;
+	color: #111111;
+	font-weight: 500;
+}
+
+.signup__subtitle {
+	margin: 0;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+}
+
+.signup__form {
+	margin-top: 20px;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	z-index: 2;
+}
+
+.signup__form-start {
+	margin-right: 16px;
+}
+
+.signup__form-end {
+	width: 48%;
+}
+
+.signup__label {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Work Sans';
+	font-size: 12px;
+	line-height: 14px;
+	color: #7C7C7C;
+	width: 100%;
+	margin-top: 16px;
+	z-index: 2;
+}
+
+.signup__label-txt {
+	z-index: 2;
+}
+
+.signup__label:first-child {
+	margin-top: 0;
+}
+
+.signup__input {
+	border: 0;
+	border-bottom: 1px solid #F2F2F2;
+	padding: 5px 0 7px 0.4px;
+	outline: 0;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+	font-weight: 500;
+	z-index: 2;
+	background: transparent no-repeat 100% 50%;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.signup__select {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #F2F2F2;
+	padding: 5px 0 7px 0.4px;
+	outline: 0;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+	font-weight: 500;
+	position: relative;
+	background: url(icons/arrow.svg);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	z-index: 2;
+}
+
+.signup__option {
+	font-family: sans-serif;
+	font-weight: 500;
+	background: transparent;
+	z-index: 2;
+}
+
+.signup__select_day {
+	min-width: 56px;
+	margin-right: 10px;
+}
+
+.signup__select_month {
+	min-width: 88px;
+	margin-right: 10px;
+}
+
+.signup__select_year {
+	min-width: 63px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+	position: relative;
+	padding-left: 18px;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 12px;
+	height: 12px;
+	border: 0.7px solid #5A61ED;
+	box-sizing: border-box;
+	border-radius: 100%;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+	box-sizing: border-box;
+	content: '';
+	width: 6px;
+	height: 6px;
+	background: #5A61ED;
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.signup__label-flex {
+	display: flex;
+	align-items: center;
+	margin-top: 5.3px;
+}
+
+.signup__p {
+	z-index: 2;
+	display: flex;
+	margin-right: 19px;
+	padding-bottom: 7px;
+}
+
+.signup__p:last-child {
+	margin-right: 0;
+}
+
+.signup__sub {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 98px;
+}
+
+.signup__redirect {
+	font-family: 'Work Sans';
+	font-size: 13px;
+	line-height: 15px;
+	color: #000000;
+	font-weight: 300;
+	z-index: 2;
+}
+
+.signup__link {
+	font-family: 'Work Sans';
+	font-size: 13px;
+	line-height: 15px;
+	color: #5A61ED;
+	font-weight: 500;
+	transition: .2s;
+	z-index: 2;
+}
+
+.signup__link:hover {
+	opacity: .7;
+}
+
+.signup__btn {
+	font-family: 'PT Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFFFF;
+	background: #5A61ED;
+	border: 0.5px solid #FFFFFF;
+	cursor: pointer;
+	transition: .2s;
+	z-index: 2;
+	min-height: 32px;
+	min-width: 154px;
+}
+
+.signup__btn:hover {
+	opacity: .7;
+}
+
+.bg {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+@media screen and (max-width: 750px) {
+	.signup__box {
+		max-height: 100%;
+	}
+	.signup__form {
+		flex-direction: column;
+	}
+	.signup__sub {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.signup__btn {
+		margin-top: 10px;
+		width: 100%;
+	}
+
+	.signup__sub {
+		margin-top: 40px;
+	}
+	.signup__form-end {
+		width: 100%;
+		margin-top: 16px;
+	}
+	.signup__form-start {
+		width: 100%;
+		margin-right: 0;
+	}
+	.signup__select {
+		width: 100%;
+		margin-top: 16px;
+	}
+	.signup__select:first-child {
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	.signup__title-form {
+		display: none;
+	}
+}
+
