@@ -69,6 +69,7 @@ p {
 	z-index: 2;
 }
 
+
 .signup__user {
 	width: 100%;
 	padding: 39px 22px 33px 21px;
@@ -165,7 +166,7 @@ select::-ms-expand {
 	color: #111111;
 	font-weight: 500;
 	position: relative;
-	background: url(icons/arrow.svg);
+	background: url(../icons/arrow.svg);
 	background-repeat: no-repeat;
 	background-position: 100% 50%;
 	z-index: 2;
@@ -322,7 +323,63 @@ select::-ms-expand {
 	z-index: 1;
 }
 
+.popup {
+	display: none;
+	max-width: 527px;
+	padding: 38px 22px 33px 21px;
+}
+
+.popup__active {
+	display: block;
+	min-width: 527px;
+}
+
+.popup__title {
+	margin: 178px 0 0;
+	font-family: 'Work Sans';
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: -0.46px;
+	color: #111111;
+}
+
+.popup__subtitle {
+	margin-top: 11px;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	line-height: 16px;
+	color: #111111;
+}
+
+.signup__redirect_mt {
+	margin-top: 152px;
+}
+
+.button {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	perspective: 1000px;
+}
+
+@keyframes shake {
+	10%, 90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+	20%, 80% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%, 50%, 70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+	40%, 60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
 @media screen and (max-width: 750px) {
+	.popup__active {
+		min-width: 100%;
+	}
 	.signup__box {
 		max-height: 100%;
 	}

@@ -8,13 +8,18 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="style/style.css">
 	<title>Sign up</title>
 </head>
 <body>
 	<div class="signup">
 		<div class="signup__box">
 				<h1 class="signup__title-form">Sign up</h1>
+			<div class="popup">
+				<h2 class="popup__title">Thank You!</h2>
+				<p class="popup__subtitle">you registered!</p>
+				<p class="signup__redirect signup__redirect_mt">Have an account? <a class="signup__link" href="#">Login</a></p>
+			</div>
 				<div class="signup__user">
 					<p class="signup__title">New user?</p>
 					<p class="signup__subtitle">Use the form below to create your account.</p>
@@ -22,7 +27,7 @@
 						<div class="signup__form-start">
 							<label class="signup__label" for="name">
 								<p class="signup__label-txt">First Name</p>
-								<input class="signup__input" type="text" name="name" id="name">
+								<input class="signup__input" type="text" name="name" id="name" required>
 							</label>
 							<label for="nationality" class="signup__label">
 								<p class="signup__label-txt">Nationality</p>
@@ -50,13 +55,13 @@
 							</label>
 							<label for="password" class="signup__label">
 								<p class="signup__label-txt">Password</p>
-								<input type="password" id="password" class="signup__input" name="password">
+								<input type="password" id="password" class="signup__input" name="password" required>
 							</label>
 						</div>
 						<div class="signup__form-end">
 							<label for="lastname" class="signup__label">
 								<p class="signup__label-txt">Last Name</p>
-								<input type="text" name="lastname" id="lastname" class="signup__input">
+								<input type="text" name="lastname" id="lastname" class="signup__input" required>
 							</label>
 							<label for="email" class="signup__label">
 								<p class="signup__label-txt">E-mail</p>
@@ -66,11 +71,11 @@
 								<p class="signup__label-txt">Gender</p>
 								<div class="signup__label-flex">
 								<p class="signup__p">
-									<input type="radio" id="male" name="radio-group" checked>
+									<input type="radio" id="male" class="signup__radio" name="radio-group" checked required>
 									<label for="male">Male</label>
 								</p>
 								<p class="signup__p">
-									<input type="radio" id="female" name="radio-group">
+									<input type="radio" id="female" class="signup__radio" name="radio-group" required>
 									<label for="female">Female</label>
 								</p>
 								</div>
