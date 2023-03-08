@@ -1,18 +1,7 @@
-/*
-(i) Код попадает в итоговый файл,
-только когда вызвана функция,
-например flsFunctions.spollers();
-Или когда импортирован весь файл,
-например import "files/script.js";
-Неиспользуемый (не вызванный)
-код в итоговый файл не попадает.
 
-Если мы хотим добавить модуль
-следует его расскоментировать
-*/
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window['Artur'] = true;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -74,17 +63,16 @@ flsFunctions.isWebp();
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
-/* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
 	viewPass: false,
 	autoHeight: false
 });
-*/
+
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();

@@ -2,10 +2,29 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
+	display: inline-block;
+	font-family: "PTSans";
+	font-size: 14px;
+	line-height: 1.28;
+	color: #fff;
+	background-color: #5a61ed;
+	border: 0.5px solid #fff;
+	padding: 6px 25px;
+	transition: background-color 0.2s ease;
+	// .button_login
+	&__login {
+		color: rgba(90, 97, 237, 1);
+		font-weight: 500;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: #2a34f0;
 		}
 	}
 	&._fw {
