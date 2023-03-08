@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"TEST"
+})
+
+<body>
+	<div class="wrapper">
+
+		<main class="page">
+			<div class="page__container">
+
+				<aside class="page__aside">
+					<div class="page__text">Sign up</div>
+				</aside>
+
+				<div class="register-body">
+					<div class="register-body__header">
+						<h2 class="register-body__title">New user?</h2>
+						<p class="register-body__sub-title">
+							Use the form below to create your account.
+						</p>
+					</div>
+
+
+					<form class="form" action="#">
+						<div class="form__columns">
+
+							<div class="form__line">
+								<label class="form__label" for="first-name">First Name</label>
+								<input class="form__input" data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Alice" id="first-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">Last Name</label>
+								<input class="form__input" data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" id="last-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">Nationality</label>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" class="form__input" id="last-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">E-mail</label>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" class="form__input" id="last-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">Date</label>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" class="form__input" id="last-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">Gender</label>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" class="form__input" id="last-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">Pass</label>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" class="form__input" id="last-name">
+							</div>
+
+							<div class="form__line">
+								<label class="form__label" for="last-name">Pass==</label>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Miller" class="form__input" id="last-name">
+							</div>
+
+						</div>
+
+						<div class="button-block">
+							<div class="button-block__link">
+								<span class="button-block__text">Have an account?</span>
+								<a href="#" class="button__login">Login</a>
+							</div>
+							<button type="submit" class="button">Complete Signup</button>
+						</div>
+					</form>
+
+
+
+
+
+
+				</div>
+
+
+			</div>
+		</main>
+
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

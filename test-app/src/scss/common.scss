@@ -1,0 +1,16 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 15px;
+	// .button-block__link
+	&__link {
+	}
+	// .button-block__text
+	&__text {
+		font-size: 13px;
+		line-height: 1.15;
+		color: #000;
+	}
+}

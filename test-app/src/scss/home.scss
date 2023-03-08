@@ -1,0 +1,81 @@
+//====================================================================================================
+.page {
+	// .page__container
+	&__container {
+		display: flex;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background-color: #f4f5fc;
+	}
+	// .page__aside
+	&__aside {
+		min-width: 138px;
+		writing-mode: vertical-rl;
+		background-color: #5a61ed;
+	}
+	// .page__text
+	&__text {
+		font-family: "PTSans";
+		font-size: 49px;
+		line-height: 1.28;
+		color: #fff;
+		letter-spacing: 0.5px;
+		transform: rotate(180deg);
+		margin-bottom: 22px;
+	}
+}
+//====================================================================================================
+.register-body {
+	width: 100%;
+	background-color: #fff;
+	padding: 39px 22px 33px 20px;
+	// .register-body__header
+	&__header {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	// .register-body__title
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 1.18;
+		letter-spacing: -0.46px;
+	}
+	// .register-body__sub-title
+	&__sub-title {
+	}
+}
+//========================================================================================================================================================
+.form {
+	// .form__columns
+	&__columns {
+		display: grid;
+		column-gap: 15px;
+		grid-template-columns: 1fr 1fr;
+		&:not(:last-child) {
+			margin-bottom: 98px;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
+	}
+	// .form__line
+	&__line {
+		position: relative;
+
+		margin-bottom: 16px;
+	}
+	// .form__label
+	&__label {
+		display: block;
+		font-size: 12px;
+		font-weight: 300;
+		color: #7c7c7c;
+		line-height: 1.16;
+		cursor: pointer;
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+}
