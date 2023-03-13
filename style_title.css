@@ -1,0 +1,25 @@
+.title_container {
+    position: relative;
+    width: 138px;
+    height: 481px;
+    left: 0px;
+    top: 0px;
+    background-color: #5A61ED;
+}
+
+.title_text {
+    position: absolute;
+    margin: 0;
+    height: 63px;
+    width: 162px;
+    top: 346.02px;
+    left: 21.98px;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    transform: rotate(-90deg);
+}

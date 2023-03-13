@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/TEST/style.css">
+    <link rel="stylesheet" href="/TEST/style_title.css">
+    <link rel="stylesheet" href="/TEST/style_form.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title_container">
+            <p class="title_text">Sign up</p>
+        </div>
+        <div class="form_container">
+            <!-- svg-icon -->
+            <object id="Слой_1" type="image/svg+xml" data="/TEST/images/Shape-1.svg"></object>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
+            <!-- svg-icon -->
+            <div class="form">
+                <h2>New user?</h2>
+                <p>Use the form below to create your account.</p>
+                <form class="main_form">
+                    <div class="main_form-part">
+                        <label for="firstname" class="label_user">First Name</label>
+                        <input type="text" class="user_input" name="firstname" id="firstname" value="Alice" required>
+                    </div>
+                    <div class="main_form-part">
+                        <label for="lastname" class="label_user">Last Name</label>
+                        <input type="text" class="user_input" name="lastname" id="lastname" value="Miller" required>
+                    </div>
+                    <div class="main_form-part">
+                        <label for="nationality" class="label_user">Nationality</label>
+                        <select class="user_input" name="nationality" id="nationality"></select>
+                    </div>
+                    <div class="main_form-part">
+                        <label for="email" class="label_user">E-mail</label>
+                        <input type="email" class="user_input" name="email" id="email" value="alice.miller@yahoo.com"
+                            required>
+                    </div>
+                    <div class="main_form-part">
+                        <p class="label_user">Date of Birth</p>
+                        <div class="selectdate">
+                            <select class="date_input" name="datebirth" id="date"></select>
+                            <select class="date_input" name="datebirth" id="month"></select>
+                            <select class="date_input" name="datebirth" id="year"></select>
+                        </div>
+                    </div>
+                    <div class="main_form-part">
+                        <p class="label_user">Gender</p>
+                        <div class="gender">
+
+                            <div class="gender_box gender_box-male">
+                                <input id="male" type="radio" name="radio" class="gender_input">
+                                <label for="male" class="label_radio">Male</label>
+                            </div>
+
+                            <div class="gender_box gender_box-female">
+                                <input id="female" type="radio" name="radio" class="gender_input" checked>
+                                <label for="female" class="label_radio">Female</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="main_form-part">
+                        <label for="inputpassword" class="label_user">Password</label>
+                        <input type="password" class="input_password" name="password" id="inputpassword" required>
+                    </div>
+                    <div class="main_form-part">
+                        <label for="inputpassword" class="label_user">Confirm Password</label>
+                        <input type="password" class="input_password" name="confirmpassword" id="confirmpassword"
+                            required>
+                    </div>
+
+                    <button type="submit" class="inp_btn" id="close_btn">Complete Signup</button>
+                </form>
+            </div>
+            <div class="login-link">
+                Have an account?<a href="#">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/TEST/script-svg.js"></script>
+    <script src="/TEST/script.js"></script>
+</body>
+
+</html>

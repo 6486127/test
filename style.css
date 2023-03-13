@@ -1,0 +1,33 @@
+body {
+    position: relative;
+    background: #F4F5FC;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 665px;
+    height: 481px;
+    margin: 10% auto;
+    /* left: 68px;
+    top: 60px; */
+    /* background-color: cyan; */
+}
+
+.login-link {
+    position: absolute;
+    width: auto;
+    height: 15px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+    right: 360px;
+    bottom: 44px;
+}
+a{
+    margin-left: 5px;
+    color: #5A61ED;
+}
