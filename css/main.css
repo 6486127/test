@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	background-color: #f4f5fc;
+
+	font-family: Work Sans !important;
+	color: #111;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+:root {
+	--main-color: #fff;
+	--addit-color: #5a61ed;
+}
+
+.block-register {
+	width: 83vw;
+	height: 80vh;
+
+	background-color: var(--main-color);
+}
+
+.block-register__main-container {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+}
+
+.main-container__info {
+	width: 20.6%;
+	height: 100%;
+
+	background-color: var(--addit-color);
+
+	position: relative;
+}
+
+.main-container__info h1 {
+	color: #fff;
+	font-size: 49px;
+	font-weight: 400;
+	font-family: PT Sans;
+	letter-spacing: 0.5px;
+
+	white-space: nowrap;
+
+	transform: rotate(-90deg);
+
+	position: absolute;
+	bottom: 71px;
+	left: 20px;
+}
+
+.main-container__reg, .main-container__final-reg {
+	flex: 1;
+
+	margin: 40px 21px 32px 21px;
+
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-container__reg {
+	display: flex;
+}
+
+.main-container__final-reg {
+	display: none;
+}
+
+.main-container__reg h2, .main-container__final-reg h2 {
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: 0.45px;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.reg__inpt-area {
+	justify-self: flex-start;
+	width: 100%;
+	margin: 20px 0px 0px 0px;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 13px;
+}
+
+.reg__submit {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.reg__submit p {
+	margin-bottom: 5px;
+
+	color: #000;
+	font-size: 13px;
+	font-family: Work Sans;
+	font-weight: 300;
+}
+
+.reg__submit p a {
+	color: var(--addit-color);
+}
+
+.final-reg__msg {
+	margin: auto 0;
+	padding: 25px 0px 0px 43px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.final-reg__submit p {
+	margin-bottom: 11px;
+
+	color: #000;
+	font-size: 13px;
+	font-family: Work Sans;
+	font-weight: 300;
+}
+
+.final-reg__submit p a {
+	color: var(--addit-color);
+}

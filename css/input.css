@@ -1,0 +1,164 @@
+.inpt {
+	width: 100%;
+	height: 42px;
+
+	border-bottom: 2px solid #f2f2f2;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	position: relative;
+}
+
+.inpt__title {
+	color: #7c7c7c;
+	font-size: 0.75em;
+	font-weight: 300;
+}
+
+.inpt input,
+select {
+	width: 100%;
+	height: 20px;
+	margin: 2px 0px 5px 0px;
+
+	font-family: Work Sans;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.55px;
+
+	border: none;
+	outline: none;
+}
+
+.inpt select {
+	font-family: Work Sans;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.55px;
+
+	appearance: none;
+}
+
+.inpt-svg {
+	position: absolute;
+	bottom: 11.5px;
+	right: 1px;
+
+	pointer-events: none;
+}
+
+.date {
+	border-bottom: none;
+}
+
+.inpt__date {
+	display: flex;
+	justify-content: center;
+	gap: 9.8px;
+}
+
+.inpt__mini {
+	margin-bottom: -6px;
+	border-bottom: 2px solid #f2f2f2;
+
+	position: relative;
+}
+
+.inpt__mini.day {
+	width: 56px;
+}
+.inpt__mini.mounth {
+	width: 91px;
+}
+.inpt__mini.year {
+	width: 68px;
+}
+
+.gender {
+	margin: 1px 0px 4px 0px;
+
+	border-bottom: none;
+	justify-content: space-between;
+}
+
+.inpt__checkbox-list {
+	margin: 2px 0px 5px 0px;
+
+	font-size: 14px;
+
+	display: flex;
+	gap: 21px;
+}
+
+.accept {
+	padding-left: 18px;
+	position: relative;
+}
+.accept input {
+	height: 0;
+	width: 0;
+
+	opacity: 0;
+	cursor: pointer;
+
+	position: absolute;
+}
+
+.checkmark {
+	height: 12px;
+	width: 12px;
+
+	background-color: #fff;
+	border-radius: 100%;
+	border: 0.7px solid var(--addit-color);
+
+	position: absolute;
+	bottom: 1px;
+	left: -1px;
+}
+
+.accept:hover input ~ .checkmark {
+	background-color: #fff;
+}
+
+.accept input:checked ~ .checkmark {
+	background-color: #fff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.accept input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.accept .checkmark:after {
+	width: 6px;
+	height: 6px;
+
+	background-color: var(--addit-color);
+	border-radius: 100%;
+}
+
+.btn-sub {
+	width: 154px;
+	height: 32px;
+
+	color: #fff;
+	background-color: var(--addit-color);
+	border: none;
+	outline: none;
+
+	color: #fff;
+	font-size: 14px;
+	font-family: PT Sans;
+}
