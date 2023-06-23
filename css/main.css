@@ -7,7 +7,7 @@
 }
 
 body {
-	height: 100vh;
+	min-height: 100vh;
 	background-color: #f4f5fc;
 
 	font-family: Work Sans !important;
@@ -19,6 +19,7 @@ body {
 }
 
 :root {
+	--size-mp: calc(1vw + 1vh);
 	--main-color: #fff;
 	--addit-color: #5a61ed;
 }
@@ -48,26 +49,28 @@ body {
 
 .main-container__info h1 {
 	color: #fff;
-	font-size: 49px;
+	font-size: calc(var(--size-mp) * 3.505);
 	font-weight: 400;
 	font-family: PT Sans;
 	letter-spacing: 0.5px;
 
 	white-space: nowrap;
+	writing-mode: vertical-lr;
 
-	transform: rotate(-90deg);
+	transform: rotate(-180deg);
 
 	position: absolute;
-	bottom: 71px;
-	left: 20px;
+	bottom: 21px;
+	right: 5px;
 }
 
-.main-container__reg, .main-container__final-reg {
+/* Right menu */
+.main-container__reg,
+.main-container__final-reg {
 	flex: 1;
 
 	margin: 40px 21px 32px 21px;
 
-	display: none;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -80,14 +83,15 @@ body {
 	display: none;
 }
 
-.main-container__reg h2, .main-container__final-reg h2 {
-	font-size: 22px;
+.main-container__reg h2,
+.main-container__final-reg h2 {
+	font-size: calc(var(--size-mp) * 1.571);
 	font-weight: 600;
 	letter-spacing: 0.45px;
 }
 
 p {
-	font-size: 14px;
+	font-size: calc(var(--size-mp) * 1);
 	font-weight: 300;
 }
 
@@ -111,7 +115,7 @@ p {
 	margin-bottom: 5px;
 
 	color: #000;
-	font-size: 13px;
+	font-size: calc(var(--size-mp) * 0.93);
 	font-family: Work Sans;
 	font-weight: 300;
 }
@@ -120,6 +124,7 @@ p {
 	color: var(--addit-color);
 }
 
+/* Final Block */
 .final-reg__msg {
 	margin: auto 0;
 	padding: 25px 0px 0px 43px;
@@ -133,7 +138,7 @@ p {
 	margin-bottom: 11px;
 
 	color: #000;
-	font-size: 13px;
+	font-size: calc(var(--size-mp) * 0.93);
 	font-family: Work Sans;
 	font-weight: 300;
 }
