@@ -29,9 +29,11 @@ body {
 	height: 80vh;
 
 	background-color: var(--main-color);
+
+	position: relative;
 }
 
-.block-register__main-container {
+.block-register__main-container {	
 	width: 100%;
 	height: 100%;
 
@@ -67,6 +69,7 @@ body {
 /* Right menu */
 .main-container__reg,
 .main-container__final-reg {
+	z-index: 2;
 	flex: 1;
 
 	margin: 40px 21px 32px 21px;
@@ -81,6 +84,9 @@ body {
 
 .main-container__final-reg {
 	display: none;
+	opacity: 0;
+	animation: final 1s 1;
+	opacity: 1;
 }
 
 .main-container__reg h2,
@@ -106,6 +112,8 @@ p {
 }
 
 .reg__submit {
+	z-index: 2;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -145,4 +153,51 @@ p {
 
 .final-reg__submit p a {
 	color: var(--addit-color);
+}
+
+/* Reg Error */
+.error-msg {
+	min-height: 30px;
+	width: 83vw;
+	padding: 3px 0;
+
+	background-color: rgb(255, 147, 147);
+
+	position: absolute;
+	bottom: -10%;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	opacity: 0;
+
+	transition: all 0.2s;
+}
+
+.error-content {
+	width: 100%;
+	height: 100%;
+	margin: 0 5px;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+.info-svg {
+	width: 3%;
+	height: 3%;
+}
+
+.svg-person {
+	z-index: 1;
+
+	width: 38.3vw;
+	height: 60vh;
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }

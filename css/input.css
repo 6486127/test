@@ -8,6 +8,11 @@
 	flex-direction: column;
 	justify-content: center;
 
+	transform: translateY(140px);
+	opacity: 0;
+
+	transition: all 0.2s;
+
 	position: relative;
 }
 
@@ -22,6 +27,8 @@ select {
 	width: 100%;
 	margin: 2px 0px 5px 0px;
 
+	background-color: transparent;
+	
 	font-family: Work Sans;
 	font-size: calc(var(--size-mp) * 1);
 	font-weight: 600;
@@ -48,6 +55,10 @@ select {
 	pointer-events: none;
 }
 
+.esvg {
+	opacity: 0;
+}
+
 .svg-date {
 	bottom: 40%;
 }
@@ -72,11 +83,11 @@ select {
 
 .inpt__mini.day {
 	flex: 1;
-	width: 24.44%;	
+	width: 24.44%;
 }
 .inpt__mini.mounth {
 	flex: 1.6;
-	width: 38.45%;	
+	width: 38.45%;
 }
 .inpt__mini.year {
 	width: 29.5%;

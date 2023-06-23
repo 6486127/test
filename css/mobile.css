@@ -27,7 +27,7 @@
 	.main-container__info h1 {
 		writing-mode: horizontal-tb;
 		transform: rotate(0deg);
-
+		
 		position: absolute;
 		bottom: 10px;
 		left: 10px;
@@ -49,11 +49,4 @@
 		grid-template-columns: 1fr;
 		gap: 13px;
 	}
-	/* .block-register {
-		min-height: 80vh;
-        margin: 20px 0;
-	}
-
-
-	 */
 }
