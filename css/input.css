@@ -1,0 +1,180 @@
+.inpt {
+	width: 100%;
+	min-height: 42px;
+
+	border-bottom: 2px solid #f2f2f2;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	transform: translateY(140px);
+	opacity: 0;
+
+	transition: all 0.2s;
+
+	position: relative;
+}
+
+.inpt__title {
+	color: #7c7c7c;
+	font-size: calc(var(--size-mp) * 0.86);
+	font-weight: 300;
+}
+
+.inpt input,
+select {
+	width: 100%;
+	margin: 2px 0px 5px 0px;
+
+	background-color: transparent;
+	
+	font-family: Work Sans;
+	font-size: calc(var(--size-mp) * 1);
+	font-weight: 600;
+	letter-spacing: 0.55px;
+
+	border: none;
+	outline: none;
+}
+
+.inpt select {
+	font-family: Work Sans;
+	font-size: calc(var(--size-mp) * 1);
+	font-weight: 600;
+	letter-spacing: 0.55px;
+
+	appearance: none;
+}
+
+.inpt-svg {
+	position: absolute;
+	bottom: 25%;
+	right: 1px;
+
+	pointer-events: none;
+}
+
+.esvg {
+	opacity: 0;
+}
+
+.svg-date {
+	bottom: 40%;
+}
+
+.date {
+	margin-top: -7px;
+	border-bottom: none;
+}
+
+.inpt__date {
+	display: flex;
+	justify-content: flex-start;
+	gap: 9.8px;
+}
+
+.inpt__mini {
+	margin-bottom: -6px;
+	border-bottom: 2px solid #f2f2f2;
+
+	position: relative;
+}
+
+.inpt__mini.day {
+	flex: 1;
+	width: 24.44%;
+}
+.inpt__mini.mounth {
+	flex: 1.6;
+	width: 38.45%;
+}
+.inpt__mini.year {
+	width: 29.5%;
+}
+
+.gender {
+	margin: 1px 0px 4px 0px;
+
+	border-bottom: none;
+	justify-content: space-between;
+}
+
+.inpt__checkbox-list {
+	margin: 2px 0px 5px 0px;
+
+	font-size: calc(var(--size-mp) * 1);
+
+	display: flex;
+	gap: 21px;
+}
+
+.accept {
+	padding-left: 8%;
+	position: relative;
+}
+.accept input {
+	height: 0;
+	width: 0;
+
+	opacity: 0;
+	cursor: pointer;
+
+	position: absolute;
+}
+
+.checkmark {
+	height: calc(var(--size-mp) * 0.86);
+	width: calc(var(--size-mp) * 0.86);
+
+	background-color: #fff;
+	border-radius: 100%;
+	border: 0.7px solid var(--addit-color);
+
+	position: absolute;
+	bottom: 1px;
+	left: -1px;
+}
+
+.accept:hover input ~ .checkmark {
+	background-color: #fff;
+}
+
+.accept input:checked ~ .checkmark {
+	background-color: #fff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.accept input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.accept .checkmark:after {
+	height: calc(var(--size-mp) * 0.55);
+	width: calc(var(--size-mp) * 0.55);
+
+	background-color: var(--addit-color);
+	border-radius: 100%;
+}
+
+.btn-sub {
+	width: 25.75vh;
+	height: 5.4vh;
+
+	background-color: var(--addit-color);
+	border: none;
+	outline: none;
+
+	color: #fff;
+	font-size: calc(var(--size-mp) * 1);
+	font-family: PT Sans;
+}

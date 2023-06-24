@@ -1,0 +1,77 @@
+.i-1,
+.i-2,
+.i-3,
+.i-4,
+.i-5,
+.i-6,
+.i-7,
+.i-8 {
+	animation-name: spawnInput;
+	animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.i-1 {
+    animation-duration: 0.9s;
+}
+.i-2 {
+    animation-duration: 1.1s;
+}
+.i-3 {
+    animation-duration: 1.3s;
+}
+.i-4 {
+    animation-duration: 1.5s;
+}
+.i-5 {
+    animation-duration: 1.7s;
+}
+.i-6 {
+    animation-duration: 1.9s;
+}
+.i-7 {
+    animation-duration: 2.1s;
+}
+.i-8 {
+    animation-duration: 2.3s;
+}
+
+@keyframes spawnInput {
+	from {
+		transform: translateY(140px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+.er-sub {
+	animation-name: error;
+	animation-duration: 0.5s;
+}
+
+@keyframes error {
+	0% {
+		transform: translateX(-2px);
+	}
+	50% {
+		transform: translateX(2px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes final {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
