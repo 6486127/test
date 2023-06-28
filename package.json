@@ -1,0 +1,29 @@
+{
+  "name": "test-vtop3",
+  "version": "1.0.0",
+  "description": "[Task Link](https://docs.google.com/document/d/1zdl43waAJAzt3dx2cUSFmLvu05yPq5K8f_DuCowGthI/edit#)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mike-prybytkin/test-vtop3.git"
+  },
+  "author": "mihail prybytkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mike-prybytkin/test-vtop3/issues"
+  },
+  "homepage": "https://github.com/mike-prybytkin/test-vtop3#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.63.6"
+  }
+}
