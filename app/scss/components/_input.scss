@@ -1,0 +1,51 @@
+.input-field {
+  input {
+    letter-spacing: -1px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
+
+.form__nationality {
+  label {
+    font-size: 11px;
+  }
+}
+
+.radio {
+  position: relative;
+  .radio__title {
+    position: absolute;
+    top: -4px;
+    left: 7px;
+    font-size: 11px;
+    color: $color-text-label;
+  }
+
+  .radio__buttons {
+    margin-top: 14px;
+
+    .radio__label {
+      &_2 {
+        margin-left: 10px;
+      }
+
+      .radio__buttons-title {
+        padding-left: 25px;
+        font-size: 14px;
+        &::before {
+          width: 14px;
+          height: 14px;
+          border: 2px solid $color-main;
+        }
+        &::after {
+          width: 14px;
+          height: 14px;
+          background: $color-main;
+        }
+      }
+    }
+  }
+}

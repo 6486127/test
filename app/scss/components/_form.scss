@@ -1,0 +1,40 @@
+.form__body {
+  padding-top: 20px;
+
+  .form-wrapper {
+    padding: 0 2px;
+
+    .row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__header {
+  .form__title {
+    margin: 0;
+    @include font-primary($size: 22px, $weight: 500);
+    letter-spacing: -0.5px;
+  }
+  .form__description {
+    margin: 0;
+    @include font-primary($size: 14px);
+    letter-spacing: -0.3px;
+    line-height: 18px;
+  }
+}
+
+.form__radio.radio {
+  position: relative;
+  padding: 0;
+}
+
+.form__footer {
+  margin-top: 78px;
+  @include flex($justify: space-between, $align: start);
+  letter-spacing: -0.9px;
+
+  .form__login-link {
+    margin-top: 3px;
+  }
+}

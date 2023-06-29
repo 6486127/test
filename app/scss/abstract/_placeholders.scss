@@ -1,0 +1,13 @@
+%transition {
+  transition: all .3s ease-in-out;
+}
+
+%button-rectangular {
+  width: 154px;
+  height: 32px;
+}
+
+%button-colored {
+  background: $color-main;
+  color: $color-text-additionary;
+}

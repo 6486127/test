@@ -1,0 +1,12 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font-primary();
+}
+
+h2 {
+  @include font-additionary();
+}

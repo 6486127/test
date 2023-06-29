@@ -1,0 +1,26 @@
+.datepicker {
+  word-spacing: 40px;
+}
+
+.datepicker-date-display,
+.datepicker-table td.is-selected {
+  background: $color-main;
+}
+
+.datepicker-calendar-container {
+  thead {
+    abbr {
+      color: $color-main;
+    }
+  }
+}
+
+.datepicker-table {
+  font-size: 14px;
+}
+
+.confirmation-btns {
+  button {
+    color: $color-main;
+  }
+}

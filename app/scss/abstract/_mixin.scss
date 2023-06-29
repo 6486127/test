@@ -1,0 +1,20 @@
+@mixin flex ($justify: center, $align: center, $flow: row wrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+}
+
+@mixin font-primary ($size: 1.4rem, $weight: 400, $color: $color-text-primary) {
+  font-family: 'Work Sans', 'Verdana', 'Geneva', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin font-additionary ($size: 4.9rem, $weight: 400, $color: $color-text-additionary) {
+  font-family: 'PT Sans', 'Arial Narrow', 'Arial', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

@@ -1,0 +1,17 @@
+.button {
+  @extend %transition;
+  border: none;
+  outline: none;
+}
+
+.button_colored {
+  @extend %button-colored;
+}
+
+.button_rectangular {
+  @extend %button-rectangular;
+  @include font-additionary($size: 14px);
+  text-transform: none;
+  line-height: 0px;
+  letter-spacing: 0px;
+}

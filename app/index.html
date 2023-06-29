@@ -5,11 +5,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TZ-VTOP3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  
+  <main class="main">
+    <div class="main__wrapper">
+      <div class="main__col main__col_1">
+        <h2 class="main__title">Sign up</h2>
+      </div>
+      <div class="main__col main__col_2">
+        <div class="main__form form">
+          <div class="form__header">
+            <h3 class="form__title">New user?</h3>
+            <p class="form__description">Use the form below to create your account.</p>
+          </div>
+          <div class="form__body row">
+            <form class="col s12 form-wrapper">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s6 form__nationality">
+                  <select class="icons">
+                    <option value="1" selected data-icon="images/src/icons/usa.png">USA</option>
+                    <option value="2" data-icon="images/src/icons/finland.png">Finland</option>
+                    <option value="3" data-icon="images/src/icons/canada.png">Canada</option>
+                    <option value="4" data-icon="images/src/icons/sweden.png">Sweden</option>
+                    <option value="5" data-icon="images/src/icons/norway.png">Norway</option>
+                    <option value="6" data-icon="images/src/icons/argentina.png">Argentina</option>
+                  </select>
+                  <label>Nationality</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="datepicker" type="text" class="datepicker">
+                  <label for="datepicker">Date of Birth</label>
+                </div>
+                <div class="col s6 form__radio radio">
+                  <span class="radio__title">Gender</span>
+                  <div class="radio__buttons">
+                    <label class="radio__label">
+                      <input class="with-gap radio__input" name="gender" type="radio" checked />
+                      <span class="radio__buttons-title">Male</span>
+                    </label>
+                    <label class="radio__label radio__label_2">
+                      <input class="with-gap radio__input" name="gender" type="radio" />
+                      <span class="radio__buttons-title">Female</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="confirm-password" type="password" class="validate">
+                  <label for="confirm-password">Confirm Password</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form__footer">
+            <div class="form__login-link">
+              Have an account? <a href="#">Login</a>
+            </div>
+            <button
+              class="form__submit-button button button_rectangular btn waves-effect waves-light indigo accent-3">Complete
+              Signup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script type="module" src="js/main.min.js"></script>
 </body>
 

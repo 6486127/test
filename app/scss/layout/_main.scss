@@ -1,0 +1,36 @@
+.main {
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  background: $color-bg-main;
+
+  .main__wrapper {
+    @include flex($justify: space-between, $align: flex-start);
+    height: 100%;
+    padding: 60px 68px;
+  }
+}
+
+.main__col {
+  height: 100%;
+
+  &_1 {
+    @include flex($justify: end, $align: end);
+    flex-basis: 138px;
+    background: $color-main;
+
+    .main__title {
+      margin: 0 10px 21px 0;
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+      font-size: 49px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  &_2 {
+    flex-grow: 1;
+    background: $color-bg-form;
+    padding: 40px 20px;
+  }
+}
