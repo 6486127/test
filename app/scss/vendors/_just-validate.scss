@@ -1,0 +1,11 @@
+.just-validate-error-field {
+  color: $color-error !important; // override library styles
+  border-bottom: $color-error solid 1px !important;
+  box-shadow: 0 1px 0 0 $color-error !important;
+}
+
+.just-validate-success-field {
+  background-image: url('../../images/src/icons/check-mark.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+}
