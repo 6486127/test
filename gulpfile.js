@@ -81,7 +81,7 @@ const watching = () => {
 	});
 	watch(["app/scss/**/*.scss"], styles);
 	watch(["app/images/src"], images);
-	watch(["app/js/main.js"], scripts);
+	watch(["app/**/*.js", "!app/js/main.min.js"], scripts);
 	watch(["app/*.html"]).on("change", browserSync.reload);
 };
 

@@ -24,14 +24,14 @@
             <p class="form__description">Use the form below to create your account.</p>
           </div>
           <div class="form__body row">
-            <form class="col s12 form-wrapper">
+            <form class="col s12 form-wrapper" id="form-signup" method="post">
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="first_name" type="text" class="validate">
+                  <input id="first_name" type="text" class="novalidate">
                   <label for="first_name">First Name</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="last_name" type="text" class="validate">
+                  <input id="last_name" type="text" class="novalidate">
                   <label for="last_name">Last Name</label>
                 </div>
               </div>
@@ -49,8 +49,8 @@
                   <label>Nationality</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
+                  <input id="signup-email" type="email" class="novalidate">
+                  <label for="signup-email">Email</label>
                 </div>
               </div>
 
@@ -76,12 +76,12 @@
 
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
+                  <input id="signup-password" type="password" class="novalidate">
+                  <label for="signup-password">Password</label>
                 </div>
                 <div class="input-field col s6">
-                  <input id="confirm-password" type="password" class="validate">
-                  <label for="confirm-password">Confirm Password</label>
+                  <input id="signup-confirm-password" type="password" class="novalidate">
+                  <label for="signup-confirm-password">Confirm Password</label>
                 </div>
               </div>
             </form>
@@ -90,8 +90,9 @@
             <div class="form__login-link">
               Have an account? <a href="#">Login</a>
             </div>
-            <button
-              class="form__submit-button button button_rectangular btn waves-effect waves-light indigo accent-3">Complete
+            <button type="submit" form="form-signup"
+              class="form__submit-button button button_rectangular btn waves-effect waves-light indigo accent-3"
+              id="form-signup-submit">Complete
               Signup</button>
           </div>
         </div>
@@ -100,6 +101,7 @@
 
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script type="module" src="js/main.min.js"></script>
 </body>
 
