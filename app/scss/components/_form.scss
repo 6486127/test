@@ -33,8 +33,22 @@
   margin-top: 78px;
   @include flex($justify: space-between, $align: start);
   letter-spacing: -0.9px;
+  @include media-tablet {
+    margin-top: 50px;
+  }
+  @include media-tablet-small {
+    margin: 40px 0;
+  }
+  @include media-mobile {
+    @include flex($justify: center, $align: center, $flow: column-reverse nowrap);
+    gap: 20px;
+    margin: 20px 0;
+  }
 
   .form__login-link {
     margin-top: 3px;
+    a {
+      text-decoration: underline;
+    }
   }
 }
