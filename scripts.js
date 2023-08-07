@@ -167,7 +167,22 @@ const validate = function (fieldId) {
       } else {
         setError(password, p, 'field is required')
       }
+
+      break
+
     case 'confirm':
+      const confirm = document.querySelector('#confirm')
+      const passwordValue = document.querySelector('#password').value
+      const confirmValue = confirm.value
+      p = document.querySelector('.error-message-confirm')
+
+      if (confirmValue.length > 0) {
+        confirmCheck(confirm, passwordValue, confirmValue, p)
+      } else {
+        setError(confirm, p, 'field is required')
+      }
+
+      break
   }
 }
 
@@ -251,5 +266,11 @@ const passwordCheck = (field, value, p) => {
   }
 }
 //utils: confirm check
-
+const confirmCheck = (field, passwordValue, confirmValue, p) => {
+  if (passwordValue !== confirmValue) {
+    setError(field, p, 'passwords mismatch')
+  } else {
+    removeError(field, p)
+  }
+}
 //-----------------------------------------------------------------//
