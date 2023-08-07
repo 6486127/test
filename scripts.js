@@ -158,6 +158,15 @@ const validate = function (fieldId) {
       break
 
     case 'password':
+      const password = document.querySelector('#password')
+      value = password.value
+      p = document.querySelector('.error-message-password')
+
+      if (value.length > 0) {
+        passwordCheck(password, value, p)
+      } else {
+        setError(password, p, 'field is required')
+      }
     case 'confirm':
   }
 }
@@ -224,8 +233,22 @@ const emailCheck = (field, value, p) => {
 }
 
 //utils: password check
-const passwordCheck = (value) => {
+const passwordCheck = (field, value, p) => {
+  const upperCase = /[A-Z]/
+  const lowerCase = /[a-z]/
+  const numbers = /[0-9]/
 
+  if (value.length < 8) {
+    setError(field, p, 'your password must be at least 8 characters')
+  } else if (!upperCase.test(value)) {
+    setError(field, p, 'your password should contain uppercase letter')
+  } else if (!lowerCase.test(value)) {
+    setError(field, p, 'your password should contain lowercase letter')
+  } else if (!numbers.test(value)) {
+    setError(field, p, 'your password should contain number')
+  } else {
+    removeError(field, p)
+  }
 }
 //utils: confirm check
 
