@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="overlay" onclick="closeAllFields()"></div>
+  <section id="sign-up">
+    <div class="title">
+      <div>Sign up</div>
+    </div>
+    <div class="form-container">
+      <div class="form">
+        <div class="wrapper">
+          <div class="new-user">
+            <p class="header">New user?</p>
+            <p class="description">Use the form below to create your account.</p>
+          </div>
+          <form>
+            <ul class="day-picker" id="day-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <ul class="month-picker" id="month-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <ul class="year-picker" id="year-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <div class="row">
+              <div class="col first-name">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" onblur="validate('first-name')" value="">
+                <p class="error-message-first-name"></p>
+              </div>
+              <div class="col last-name">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" onblur="validate('last-name')" value="">
+                <p class="error-message-last-name"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col nationality">
+                <label for="nationality">Nationality</label>
+                <div class="selectdiv">
+                  <select id="nationality">
+                    <option value="American">American</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Czech">Czech</option>
+                    <option value="English">English</option>
+                    <option value="German">German</option>
+                    <option value="Italian">Italian</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col email">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" onblur="validate('email')" value="">
+                <p class="error-message-email"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col date-birth">
+                <label for="date-birth">Date of Birth</label>
+                <div class="date-picker">
+                  <div class="current-day" id="current-day" onclick="toggleDay()">21</div>
+                  <div class="current-month" id="current-month" onclick="toggleMonth()">December</div>
+                  <div class="current-year" id="current-year" onclick="toggleYear()">1995</div>
+                </div>
+              </div>
+              <div class="col gender">
+                <label for="gender">Gender</label>
+                <div class="gender-group">
+                  <input type="radio" name="gender" id="male-gender">
+                  <label for="male-gender">Male</label>
+                  <input type="radio" name="gender" id="female-gender">
+                  <label for="female-gender">Female</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col password">
+                <label for="password">Password</label>
+                <input type="password" id="passowrd">
+                <p class="error-message-password"></p>
+              </div>
+              <div class="col confirm">
+                <label for="confirm">Confirm password</label>
+                <input type="password" id="confirm">
+                <p class="error-message-confirm"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="buttons">
+          <p class="login">Have an account? <a href="#"><span>Login</span></a></p>
+          <input type="submit" value="Complete Signup" class="submit-btn">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./scripts.js"></script>
+</body>
+
+</html>
