@@ -274,3 +274,41 @@ const confirmCheck = (field, passwordValue, confirmValue, p) => {
   }
 }
 //-----------------------------------------------------------------//
+
+//form handler - post request 
+// const formHandler = async () => {
+//   try {
+//     const response = await fetch('/server-ok.json', {
+//       method: 'POST',
+//       body: new FormData(document.querySelector('#form')),
+//       headers: {
+//         'Content-Type': 'application/json'
+//       }
+//     })
+//     const result = await response.text()
+//     console.log(JSON.stringify(result))
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+//form handler - get request
+const formHandler = async () => {
+  let data = new FormData(document.querySelector('#form'))
+
+  if (data.get('first-name') && data.get('second-name') && data.get('email')
+    && data.get('gender') && ((data.get('password') === data.get('confirm')) &&
+      data.get('password') !== '')) {
+
+    try {
+      const response = await fetch('/server-ok.json')
+      const result = await response.json().then((res) => res.message)
+      console.log(result)
+    } catch (error) {
+      console.log(error)
+    }
+
+  } else {
+    //missed data animation
+  }
+}

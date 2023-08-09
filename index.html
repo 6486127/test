@@ -22,19 +22,19 @@
             <p class="header">New user?</p>
             <p class="description">Use the form below to create your account.</p>
           </div>
-          <form>
+          <form id="form">
             <ul class="day-picker" id="day-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
             <ul class="month-picker" id="month-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
             <ul class="year-picker" id="year-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
             <div class="row">
               <div class="col first-name">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" onblur="validate('first-name')" value>
+                <input type="text" id="first-name" name="first-name" onblur="validate('first-name')" value>
                 <p class="error-message-first-name"></p>
               </div>
               <div class="col last-name">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" onblur="validate('last-name')" value>
+                <input type="text" id="last-name" name="last-name" onblur="validate('last-name')" value>
                 <p class="error-message-last-name"></p>
               </div>
             </div>
@@ -54,7 +54,7 @@
               </div>
               <div class="col email">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" onblur="validate('email')" value>
+                <input type="email" id="email" name="email" onblur="validate('email')" value>
                 <p class="error-message-email"></p>
               </div>
             </div>
@@ -70,9 +70,9 @@
               <div class="col gender">
                 <label for="gender">Gender</label>
                 <div class="gender-group">
-                  <input type="radio" name="gender" id="male-gender">
+                  <input type="radio" name="gender" id="male-gender" value="male">
                   <label for="male-gender">Male</label>
-                  <input type="radio" name="gender" id="female-gender">
+                  <input type="radio" name="gender" id="female-gender" value="female">
                   <label for="female-gender">Female</label>
                 </div>
               </div>
@@ -80,12 +80,14 @@
             <div class="row">
               <div class="col password">
                 <label for="password">Password</label>
-                <input type="password" id="password" onblur="validate('password')" value>
+                <input type="password" id="password" name="password" autocomplete="password"
+                  onblur="validate('password')" value>
                 <p class="error-message-password"></p>
               </div>
               <div class="col confirm">
                 <label for="confirm">Confirm password</label>
-                <input type="password" id="confirm" onblur="validate('confirm')" value>
+                <input type="password" id="confirm" name="confirm" autocomplete="confirm" onblur="validate('confirm')"
+                  value>
                 <p class="error-message-confirm"></p>
               </div>
             </div>
@@ -93,7 +95,7 @@
         </div>
         <div class="buttons">
           <p class="login">Have an account? <a href="#"><span>Login</span></a></p>
-          <input type="submit" value="Complete Signup" class="submit-btn">
+          <input type="submit" value="Complete Signup" class="submit-btn" onclick="formHandler()">
         </div>
       </div>
     </div>
