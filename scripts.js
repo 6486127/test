@@ -296,7 +296,7 @@ const confirmCheck = (field, passwordValue, confirmValue, p) => {
 const formHandler = async () => {
   let data = new FormData(document.querySelector('#form'))
 
-  if (data.get('first-name') && data.get('second-name') && data.get('email')
+  if (data.get('first-name') && data.get('last-name') && data.get('email')
     && data.get('gender') && ((data.get('password') === data.get('confirm')) &&
       data.get('password') !== '')) {
 
@@ -309,6 +309,8 @@ const formHandler = async () => {
     }
 
   } else {
-    //missed data animation
+    const btn = document.querySelector('.submit-btn')
+    btn.classList.add('shake')
+    setTimeout(() => btn.classList.remove('shake'), 400)
   }
 }
