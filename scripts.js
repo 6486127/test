@@ -304,6 +304,19 @@ const formHandler = async () => {
       const response = await fetch('/server-ok.json')
       const result = await response.json().then((res) => res.message)
       console.log(result)
+      const btn = document.querySelector('.submit-btn')
+      btn.setAttribute('disabled', 'disabled')
+      btn.setAttribute('value', 'Loading...')
+      const overlay = document.querySelector('.success-overlay')
+
+      //server delay simulation
+      setTimeout(() => {
+        overlay.style.display = 'flex'
+        btn.style.display = 'none'
+        //reset values for all fields
+        document.querySelector('#form').reset()
+      }, 1500)
+
     } catch (error) {
       console.log(error)
     }
