@@ -205,7 +205,8 @@ const removeError = (field, p) => {
 }
 
 //utils: uppercase
-const firstLetterUppercase = (str) => str.charAt(0).toUpperCase() + str.slice(1)
+const nameNormalize = (str) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 
 //utils: check for numbers
 const checkForNumbers = (field, value, p) => {
@@ -228,7 +229,7 @@ const nameCheck = (field) => {
   p = document.querySelector(`.error-message-${field}`)
 
   if (value.length > 0) {
-    name.value = firstLetterUppercase(value)
+    name.value = nameNormalize(value)
     checkForNumbers(name, value, p)
   } else {
     setError(name, p, 'field is required')
