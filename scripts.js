@@ -30,7 +30,7 @@ const setSelect = function (e) {
   const currentSelect = document.querySelector('.select-current')
   const selectPicker = document.querySelector('#select-picker')
   currentSelect.innerHTML = e.target.innerHTML
-  currentSelect.value = e.target.innerHTML
+  currentSelect.setAttribute('value', e.target.innerHTML)
   selectPicker.style.visibility = 'hidden'
 }
 
@@ -71,6 +71,8 @@ const setYear = function (e) {
   const currentYear = document.querySelector('.current-year')
   const yearPicker = document.querySelector('#year-picker')
   currentYear.innerHTML = e.currentTarget.value
+  currentYear.setAttribute('value', e.currentTarget.value)
+  console.log(currentYear.getAttribute('value'))
   yearPicker.style.visibility = 'hidden'
 }
 
@@ -244,7 +246,6 @@ const nameNormalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 
 //utils: normalize day
-
 const dayNormalize = (str) =>
   +str > 9 ? str : `0${str}`
 
@@ -343,7 +344,7 @@ const formHandler = async () => {
   const month = document.querySelector('.current-month')
   const year = document.querySelector('.current-year')
 
-  data.append('nationality', nationality.value)
+  data.append('nationality', nationality.getAttribute('value'))
   data.append('birthday', `${dayNormalize(day.getAttribute('value'))}.${monthNormalize(month.getAttribute('value'))}.${year.getAttribute('value')}`)
 
   if (data.get('first-name') && data.get('last-name') && data.get('email')
@@ -353,6 +354,8 @@ const formHandler = async () => {
     try {
       const response = await fetch('/server-ok.json')
       const result = await response.json().then((res) => res.message)
+
+      //result log
       console.log(result)
       for (let pair of data.entries()) {
         console.log(`${pair[0]}: ${pair[1]}`)
