@@ -217,13 +217,51 @@ select {
   background-color: transparent;
 }
 
-.selectdiv {
+.select {
   position: relative;
+  min-height: 27px;
   border-bottom: 1px solid #f2f2f2;
   background-color: transparent;
 }
 
-.selectdiv:after,
+.select:hover {
+  cursor: pointer
+}
+
+.select-current {
+  font-family: "Work Sans";
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 5px;
+  user-select: none;
+}
+
+.select-picker {
+  position: absolute;
+  visibility: hidden;
+  min-width: 236px;
+  max-height: 120px;
+  top: 42.7%;
+  overflow-y: scroll;
+  background-color: #f2f2f2;
+  box-shadow: 2px 2px 7px #afafaf;
+  user-select: none;
+  z-index: 5;
+}
+
+.select-item {
+  font-family: 'Work Sans';
+  font-weight: 500;
+  font-size: 14px;
+  padding: 4px 10px;
+}
+
+.select-item:hover {
+  cursor: pointer;
+  background-color: #e4e4e4;
+}
+
+.select:after,
 .current-day:after,
 .current-month:after,
 .current-year:after {
@@ -304,7 +342,7 @@ select[id=nationality] {
   background-color: #f2f2f2;
   box-shadow: 2px 2px 7px #afafaf;
   user-select: none;
-  z-index: 3;
+  z-index: 5;
 }
 
 .month-picker {

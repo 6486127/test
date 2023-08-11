@@ -1,19 +1,21 @@
 //onBlur effect for all of fields
 const showOverlay = function () {
-  let overlay = document.querySelector('.overlay')
+  const overlay = document.querySelector('.overlay')
   overlay.style.visibility = 'visible'
 }
 
 const hideOverlay = function () {
-  let overlay = document.querySelector('.overlay')
+  const overlay = document.querySelector('.overlay')
   overlay.style.visibility = 'hidden'
 }
 
 const closeAllFields = function () {
-  let dayPicker = document.querySelector('#day-picker')
-  let monthPicker = document.querySelector('#month-picker')
-  let yearPicker = document.querySelector('#year-picker')
+  const selectPicker = document.querySelector('#select-picker')
+  const dayPicker = document.querySelector('#day-picker')
+  const monthPicker = document.querySelector('#month-picker')
+  const yearPicker = document.querySelector('#year-picker')
 
+  selectPicker.style.visibility = 'hidden'
   dayPicker.style.visibility = 'hidden'
   monthPicker.style.visibility = 'hidden'
   yearPicker.style.visibility = 'hidden'
@@ -23,39 +25,66 @@ const closeAllFields = function () {
 
 //-----------------------------------------------------------------//
 
+//select handler
+const setSelect = function (e) {
+  const currentSelect = document.querySelector('.select-current')
+  const selectPicker = document.querySelector('#select-picker')
+  currentSelect.innerHTML = e.target.innerHTML
+  currentSelect.value = e.target.innerHTML
+  selectPicker.style.visibility = 'hidden'
+}
+
+const toggleSelect = function () {
+  closeAllFields()
+
+  const selectPicker = document.querySelector('#select-picker')
+  selectPicker.style.visibility === 'visible'
+    ? selectPicker.style.visibility = 'hidden'
+    : selectPicker.style.visibility = 'visible'
+
+  const selectItems = document.querySelectorAll('.select-item')
+  for (let i = 0; i < selectItems.length; i++) {
+    selectItems[i].onclick = setSelect
+  }
+
+  showOverlay()
+}
+
 //birth date handlers
 const setDay = function (e) {
-  let currentDay = document.querySelector('.current-day')
-  let dayPicker = document.querySelector('#day-picker')
+  const currentDay = document.querySelector('.current-day')
+  const dayPicker = document.querySelector('#day-picker')
   currentDay.innerHTML = e.currentTarget.value
   dayPicker.style.visibility = 'hidden'
 }
 
 const setMonth = function (e) {
-  let currentMonth = document.querySelector('.current-month')
-  let monthPicker = document.querySelector('#month-picker')
+  const currentMonth = document.querySelector('.current-month')
+  const monthPicker = document.querySelector('#month-picker')
   currentMonth.innerHTML = e.target.attributes.value.textContent
   monthPicker.style.visibility = 'hidden'
 }
 
 const setYear = function (e) {
-  let currentYear = document.querySelector('.current-year')
-  let yearPicker = document.querySelector('#year-picker')
+  const currentYear = document.querySelector('.current-year')
+  const yearPicker = document.querySelector('#year-picker')
   currentYear.innerHTML = e.currentTarget.value
   yearPicker.style.visibility = 'hidden'
 }
 
 const toggleDay = function () {
-  let dayPicker = document.querySelector('#day-picker')
-  let monthPicker = document.querySelector('#month-picker')
-  let yearPicker = document.querySelector('#year-picker')
+  closeAllFields()
+
+  const dayPicker = document.querySelector('#day-picker')
+  const monthPicker = document.querySelector('#month-picker')
+  const yearPicker = document.querySelector('#year-picker')
 
   dayPicker.childNodes ? dayPicker.replaceChildren() : null
   monthPicker.replaceChildren()
   yearPicker.replaceChildren()
 
   for (let i = 1; i <= 31; i++) {
-    let li = document.createElement('li')
+    const li = document.createElement('li')
     li.setAttribute('value', i)
     li.setAttribute('class', 'day-item')
     li.onclick = setDay
@@ -71,21 +100,23 @@ const toggleDay = function () {
 }
 
 const toggleMonth = function () {
-  let dayPicker = document.querySelector('#day-picker')
-  let monthPicker = document.querySelector('#month-picker')
-  let yearPicker = document.querySelector('#year-picker')
+  closeAllFields()
+
+  const dayPicker = document.querySelector('#day-picker')
+  const monthPicker = document.querySelector('#month-picker')
+  const yearPicker = document.querySelector('#year-picker')
 
   dayPicker.replaceChildren()
   monthPicker.childNodes ? monthPicker.replaceChildren() : null
   yearPicker.replaceChildren()
 
-  let months = [
+  const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ]
 
   for (let i = 0; i < 12; i++) {
-    let li = document.createElement('li')
+    const li = document.createElement('li')
     li.setAttribute('value', months[i])
     li.setAttribute('class', 'month-item')
     li.onclick = setMonth
@@ -101,19 +132,21 @@ const toggleMonth = function () {
 }
 
 const toggleYear = function () {
-  let dayPicker = document.querySelector('#day-picker')
-  let monthPicker = document.querySelector('#month-picker')
-  let yearPicker = document.querySelector('#year-picker')
+  closeAllFields()
+
+  const dayPicker = document.querySelector('#day-picker')
+  const monthPicker = document.querySelector('#month-picker')
+  const yearPicker = document.querySelector('#year-picker')
 
   dayPicker.replaceChildren()
   monthPicker.replaceChildren()
   yearPicker.childNodes ? yearPicker.replaceChildren() : null
 
-  let date = new Date()
-  let year = date.getFullYear()
+  const date = new Date()
+  const year = date.getFullYear()
 
   for (let i = year - 14; i >= 1900; i--) {
-    let li = document.createElement('li')
+    const li = document.createElement('li')
     li.setAttribute('value', i)
     li.setAttribute('class', 'year-item')
     li.onclick = setYear
@@ -204,7 +237,7 @@ const removeError = (field, p) => {
   }
 }
 
-//utils: uppercase
+//utils: normalize name fields
 const nameNormalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 
@@ -276,26 +309,12 @@ const confirmCheck = (field, passwordValue, confirmValue, p) => {
 }
 //-----------------------------------------------------------------//
 
-//form handler - post request 
-// const formHandler = async () => {
-//   try {
-//     const response = await fetch('/server-ok.json', {
-//       method: 'POST',
-//       body: new FormData(document.querySelector('#form')),
-//       headers: {
-//         'Content-Type': 'application/json'
-//       }
-//     })
-//     const result = await response.text()
-//     console.log(JSON.stringify(result))
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
-
 //form handler - get request
 const formHandler = async () => {
-  let data = new FormData(document.querySelector('#form'))
+  const data = new FormData(document.querySelector('#form'))
+  const nationality = document.querySelector('.select-current')
+
+  data.append('nationality', nationality.value)
 
   if (data.get('first-name') && data.get('last-name') && data.get('email')
     && data.get('gender') && ((data.get('password') === data.get('confirm')) &&

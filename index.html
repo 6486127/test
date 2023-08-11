@@ -27,6 +27,14 @@
             <p class="description">Use the form below to create your account.</p>
           </div>
           <form id="form">
+            <div class="select-picker" id="select-picker" onblur="closeAllFields()">
+              <div class="select-item" value="American">American</div>
+              <div class="select-item" value="Belarus">Belarus</div>
+              <div class="select-item" value="Czech">Czech</div>
+              <div class="select-item" value="English">English</div>
+              <div class="select-item" value="German">German</div>
+              <div class="select-item" value="Italian">Italian</div>
+            </div>
             <ul class="day-picker" id="day-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
             <ul class="month-picker" id="month-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
             <ul class="year-picker" id="year-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
@@ -45,15 +53,8 @@
             <div class="row">
               <div class="col nationality">
                 <label for="nationality">Nationality</label>
-                <div class="selectdiv">
-                  <select id="nationality">
-                    <option value="American">American</option>
-                    <option value="Belarus">Belarus</option>
-                    <option value="Czech">Czech</option>
-                    <option value="English">English</option>
-                    <option value="German">German</option>
-                    <option value="Italian">Italian</option>
-                  </select>
+                <div class="select" onclick="toggleSelect()">
+                  <div class="select-current" value>American</div>
                 </div>
               </div>
               <div class="col email">
