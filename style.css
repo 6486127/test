@@ -119,6 +119,7 @@ label[for=female-gender] {
   flex-direction: column;
   flex: 1 1 0;
   margin-left: 13px;
+  opacity: 0;
 }
 
 .col:first-child {
@@ -374,6 +375,9 @@ p.error {
   font-weight: 500;
 }
 
+/*animations*/
+
+/*animations: shake*/
 .shake {
   animation: horizontal-shake 0.2s 2;
 }
@@ -397,5 +401,21 @@ p.error {
 
   100% {
     transform: translateX(0)
+  }
+}
+
+.emersion {
+  animation: emersion 1s;
+}
+
+@keyframes emersion {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

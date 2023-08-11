@@ -305,6 +305,8 @@ const formHandler = async () => {
       const response = await fetch('/server-ok.json')
       const result = await response.json().then((res) => res.message)
       console.log(result)
+      //reset values for all fields
+      document.querySelector('#form').reset()
       const btn = document.querySelector('.submit-btn')
       btn.setAttribute('disabled', 'disabled')
       btn.setAttribute('value', 'Loading...')
@@ -314,8 +316,6 @@ const formHandler = async () => {
       setTimeout(() => {
         overlay.style.display = 'flex'
         btn.style.display = 'none'
-        //reset values for all fields
-        document.querySelector('#form').reset()
       }, 1500)
 
     } catch (error) {
@@ -328,3 +328,16 @@ const formHandler = async () => {
     setTimeout(() => btn.classList.remove('shake'), 400)
   }
 }
+
+//emersion animation
+const emersion = () => {
+  const fields = document.querySelectorAll('.col')
+  for (let i = 0; i < fields.length; i++) {
+    setTimeout(() => {
+      fields[i].classList.add('emersion')
+      fields[i].style.opacity = 1
+    }, 350 * i)
+  }
+}
+
+window.addEventListener('load', emersion)
