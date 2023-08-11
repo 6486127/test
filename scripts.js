@@ -55,13 +55,15 @@ const setDay = function (e) {
   const currentDay = document.querySelector('.current-day')
   const dayPicker = document.querySelector('#day-picker')
   currentDay.innerHTML = e.currentTarget.value
+  currentDay.setAttribute('value', e.target.innerHTML)
   dayPicker.style.visibility = 'hidden'
 }
 
 const setMonth = function (e) {
   const currentMonth = document.querySelector('.current-month')
   const monthPicker = document.querySelector('#month-picker')
-  currentMonth.innerHTML = e.target.attributes.value.textContent
+  currentMonth.innerHTML = e.target.innerHTML
+  currentMonth.setAttribute('value', e.target.innerHTML)
   monthPicker.style.visibility = 'hidden'
 }
 
@@ -111,8 +113,8 @@ const toggleMonth = function () {
   yearPicker.replaceChildren()
 
   const months = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    'January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December'
   ]
 
   for (let i = 0; i < 12; i++) {
@@ -241,6 +243,30 @@ const removeError = (field, p) => {
 const nameNormalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
 
+//utils: normalize day
+
+const dayNormalize = (str) =>
+  +str > 9 ? str : `0${str}`
+
+//utils: normalize month
+const monthNormalize = (str) => {
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December'
+  ]
+
+  for (let i = 0; i < months.length; i++) {
+    if (months[i] === str) {
+      if (i > 8) {
+        return i + 1
+      } else {
+        return `0${i + 1}`
+      }
+
+    }
+  }
+}
+
 //utils: check for numbers
 const checkForNumbers = (field, value, p) => {
   const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
@@ -313,8 +339,12 @@ const confirmCheck = (field, passwordValue, confirmValue, p) => {
 const formHandler = async () => {
   const data = new FormData(document.querySelector('#form'))
   const nationality = document.querySelector('.select-current')
+  const day = document.querySelector('.current-day')
+  const month = document.querySelector('.current-month')
+  const year = document.querySelector('.current-year')
 
   data.append('nationality', nationality.value)
+  data.append('birthday', `${dayNormalize(day.getAttribute('value'))}.${monthNormalize(month.getAttribute('value'))}.${year.getAttribute('value')}`)
 
   if (data.get('first-name') && data.get('last-name') && data.get('email')
     && data.get('gender') && ((data.get('password') === data.get('confirm')) &&
@@ -324,6 +354,10 @@ const formHandler = async () => {
       const response = await fetch('/server-ok.json')
       const result = await response.json().then((res) => res.message)
       console.log(result)
+      for (let pair of data.entries()) {
+        console.log(`${pair[0]}: ${pair[1]}`)
+      }
+
       //reset values for all fields
       document.querySelector('#form').reset()
       const btn = document.querySelector('.submit-btn')
