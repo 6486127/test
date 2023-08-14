@@ -202,20 +202,6 @@ input[id=female-gender] {
   margin-left: 19px;
 }
 
-select,
-input[type=date] {
-  border: none;
-  outline: none;
-}
-
-select {
-  font-family: "Work Sans";
-  font-weight: 500;
-  font-size: 14px;
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: transparent;
-}
 
 .select {
   position: relative;
@@ -225,7 +211,7 @@ select {
 }
 
 .select:hover {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .select-current {
@@ -316,17 +302,6 @@ select {
   top: 1px;
 }
 
-select[id=nationality] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  width: 100%;
-  margin-top: 5px;
-  padding-bottom: 6px;
-  cursor: pointer;
-}
-
 .date-picker {
   position: relative;
 }
@@ -385,6 +360,11 @@ input[type=submit] {
   color: #fff;
 }
 
+input[type=submit]:focus {
+  outline-offset: 2px;
+  outline: 2px solid #5A61ED;
+}
+
 input[type=submit]:hover {
   cursor: pointer;
 }
@@ -411,6 +391,15 @@ p.error {
 
 .login span {
   font-weight: 500;
+}
+
+/*focus effects*/
+.select:focus,
+.current-day:focus,
+.current-month:focus,
+.current-year:focus {
+  outline: none;
+  border-bottom: 1px solid #9fa3e9;
 }
 
 /*animations*/
@@ -442,6 +431,8 @@ p.error {
   }
 }
 
+
+/*animations: emersion */
 .emersion {
   animation: emersion 1s;
 }
