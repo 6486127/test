@@ -77,10 +77,22 @@
               <div class="col gender">
                 <label for="gender">Gender</label>
                 <div class="gender-group">
-                  <input type="radio" name="gender" id="male-gender" tabindex="8" value="male">
+                  <!-- <input type="radio" name="gender" id="male-gender" tabindex="8" value="male">
                   <label for="male-gender">Male</label>
                   <input type="radio" name="gender" id="female-gender" tabindex="9" value="female">
-                  <label for="female-gender">Female</label>
+                  <label for="female-gender">Female</label> -->
+                  <label class="radio-container">
+                    <input type="radio" id="male" class="gender-radio" value="Male" tabindex="8" name="gender"
+                      onclick="setRadioChecked('male')">
+                    <span class="checkmark" id="male-checkmark"></span>
+                    <span class="gender-description">Male</span>
+                  </label>
+                  <label class="radio-container">
+                    <input type="radio" id="female" class="gender-radio" value="Female" tabindex="9" name="gender"
+                      onclick="setRadioChecked('female')">
+                    <span class="checkmark" id="female-checkmark"></span>
+                    <span class="gender-description">Female</span>
+                  </label>
                 </div>
               </div>
             </div>

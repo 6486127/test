@@ -156,7 +156,7 @@ input {
   background-color: transparent;
 }
 
-input[type=radio] {
+/* input[type=radio] {
   position: relative;
   width: 12px;
   height: 12px;
@@ -200,8 +200,77 @@ input[id=female-gender] {
 
 input[id=female-gender] {
   margin-left: 19px;
+} */
+
+
+/*custom radio group*/
+.gender-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 5.3px;
 }
 
+.radio-container {
+  display: block;
+  position: relative;
+  margin-right: 19px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  outline: 1px solid #5A61ED;
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input~.checkmark:after {
+  display: none;
+}
+
+.radio-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5A61ED;
+}
+
+.gender-description {
+  font-family: 'Work Sans';
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 18px;
+  color: #111111;
+}
 
 .select {
   position: relative;
@@ -358,11 +427,6 @@ input[type=submit] {
   padding: 7px 25px;
   background-color: #5A61ED;
   color: #fff;
-}
-
-input[type=submit]:focus {
-  outline-offset: 2px;
-  outline: 2px solid #5A61ED;
 }
 
 input[type=submit]:hover {

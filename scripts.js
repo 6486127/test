@@ -165,6 +165,21 @@ const toggleYear = function () {
   showOverlay()
 }
 
+//radio buttons handler
+const setRadioChecked = (id) => {
+  const radio = document.querySelector(`#${id}`)
+  radio.setAttribute('checked', '')
+
+  const radioArr =
+    Array.from(document.querySelectorAll('input[type=radio].gender-radio'))
+  const otherRadios = radioArr.filter((radio) => radio.id !== id)
+
+  for (let radio of otherRadios) {
+    radio.hasAttribute('checked') && radio.removeAttribute('checked')
+    break
+  }
+}
+
 //-----------------------------------------------------------------//
 
 //fields validation
