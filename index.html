@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Sign up</title>
 </head>
 
 <body>
   <div class="overlay" onclick="closeAllFields()"></div>
-  <section id="sign-up">
+  <div class="container">
     <div class="title">
       <div>Sign up</div>
     </div>
@@ -21,25 +25,14 @@
           <div class="header thanks">Thank you!</div>
           <div class="description thanks">you registered!</div>
         </div>
-        <div class="wrapper">
+        <div>
           <div class="new-user">
             <p class="header">New user?</p>
             <p class="description">Use the form below to create your account.</p>
           </div>
           <form id="form">
-            <div class="select-picker" id="select-picker" onblur="closeAllFields()">
-              <div class="select-item" value="American">American</div>
-              <div class="select-item" value="Belarus">Belarus</div>
-              <div class="select-item" value="Czech">Czech</div>
-              <div class="select-item" value="English">English</div>
-              <div class="select-item" value="German">German</div>
-              <div class="select-item" value="Italian">Italian</div>
-            </div>
-            <ul class="day-picker" id="day-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
-            <ul class="month-picker" id="month-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
-            <ul class="year-picker" id="year-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
             <div class="row">
-              <div class="col">
+              <div class="col first-name">
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" name="first-name" onblur="validate('first-name')" tabindex="1" value>
                 <p class="error-message-first-name"></p>
@@ -77,10 +70,6 @@
               <div class="col gender">
                 <label for="gender">Gender</label>
                 <div class="gender-group">
-                  <!-- <input type="radio" name="gender" id="male-gender" tabindex="8" value="male">
-                  <label for="male-gender">Male</label>
-                  <input type="radio" name="gender" id="female-gender" tabindex="9" value="female">
-                  <label for="female-gender">Female</label> -->
                   <label class="radio-container">
                     <input type="radio" id="male" class="gender-radio" value="Male" tabindex="8" name="gender"
                       onclick="setRadioChecked('male')">
@@ -104,12 +93,23 @@
                 <p class="error-message-password"></p>
               </div>
               <div class="col confirm">
-                <label for="confirm">Confirm password</label>
+                <label for="confirm">Confirm Password</label>
                 <input type="password" id="confirm" name="confirm" autocomplete="confirm" onblur="validate('confirm')"
                   tabindex="11" value>
                 <p class="error-message-confirm"></p>
               </div>
             </div>
+            <div class="select-picker" id="select-picker" onblur="closeAllFields()">
+              <div class="select-item" value="American">American</div>
+              <div class="select-item" value="Belarus">Belarus</div>
+              <div class="select-item" value="Czech">Czech</div>
+              <div class="select-item" value="English">English</div>
+              <div class="select-item" value="German">German</div>
+              <div class="select-item" value="Italian">Italian</div>
+            </div>
+            <ul class="day-picker" id="day-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <ul class="month-picker" id="month-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <ul class="year-picker" id="year-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
           </form>
         </div>
         <div class="buttons">
@@ -118,7 +118,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
   <script src="./scripts.js"></script>
 </body>
 
