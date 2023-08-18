@@ -1,4 +1,5 @@
 :root {
+  --body-color: #F4F5FC;
   --main-color: #5A61ED;
   --main-disabled-color: #9196ee;
   --primary-text-color: #111111;
@@ -33,7 +34,7 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: antiquewhite;
+  background-color: var(--body-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,10 +103,8 @@ body {
   display: none;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  height: inherit;
-  width: inherit;
-  background-color: pink;
+  align-items: center;
+  background-color: var(--bg-color);
   z-index: 3;
 }
 
@@ -123,10 +122,6 @@ label {
 .description {
   font-size: var(--primary-text-size);
   letter-spacing: 0;
-}
-
-.thanks {
-  margin-left: 43px;
 }
 
 .row,
@@ -326,6 +321,8 @@ input {
   flex: 1 1 37%;
   max-width: 91px;
   padding-bottom: 5.6px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .current-year {

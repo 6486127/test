@@ -14,11 +14,13 @@ const closeAllFields = function () {
   const dayPicker = document.querySelector('#day-picker')
   const monthPicker = document.querySelector('#month-picker')
   const yearPicker = document.querySelector('#year-picker')
+  const successOverlay = document.querySelector('.succes-overlay')
 
   selectPicker.style.visibility = 'hidden'
   dayPicker.style.visibility = 'hidden'
   monthPicker.style.visibility = 'hidden'
   yearPicker.style.visibility = 'hidden'
+  successOverlay.style.display = 'none'
 
   hideOverlay()
 }
@@ -407,10 +409,20 @@ const formHandler = async () => {
 
       //reset values for all fields
       document.querySelector('#form').reset()
+
       const btn = document.querySelector('.submit-btn')
+      const form = document.querySelector('.form')
+      const overlay = document.querySelector('.success-overlay')
+
       btn.setAttribute('disabled', 'disabled')
       btn.setAttribute('value', 'Loading...')
-      const overlay = document.querySelector('.success-overlay')
+
+      //layer position
+      const rect = form.getBoundingClientRect()
+      overlay.style.top = `${rect.top}px`
+      overlay.style.left = `${rect.left}px`
+      overlay.style.width = `${rect.width}px`
+      overlay.style.height = `${rect.height}px`
 
       //server delay simulation
       setTimeout(() => {
