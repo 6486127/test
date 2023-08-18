@@ -37,7 +37,14 @@ const setSelect = function (e) {
 const toggleSelect = function () {
   closeAllFields()
 
+  const selectCurrent = document.querySelector('.select-current')
   const selectPicker = document.querySelector('#select-picker')
+  const rect = selectCurrent.getBoundingClientRect()
+
+  selectPicker.style.top = `${rect.bottom + 7}px`
+  selectPicker.style.left = `${rect.left}px`
+  selectPicker.style.width = `${rect.width}px`
+
   selectPicker.style.visibility === 'visible'
     ? selectPicker.style.visibility = 'hidden'
     : selectPicker.style.visibility = 'visible'
@@ -96,6 +103,13 @@ const toggleDay = function () {
     dayPicker.appendChild(li)
   }
 
+  //picker position
+  const currentDay = document.querySelector('.current-day')
+  const rect = currentDay.getBoundingClientRect()
+  dayPicker.style.top = `${rect.bottom + 7}px`
+  dayPicker.style.left = `${rect.left}px`
+  dayPicker.style.width = `${rect.width}px`
+
   dayPicker.style.visibility === 'hidden'
     ? dayPicker.style.visibility = 'visible'
     : dayPicker.style.visibility = 'hidden'
@@ -128,6 +142,14 @@ const toggleMonth = function () {
     monthPicker.appendChild(li)
   }
 
+  const currentMonth = document.querySelector('.current-month')
+  const rect = currentMonth.getBoundingClientRect()
+
+  monthPicker.style.top = `${rect.bottom + 7}px`
+  monthPicker.style.left = `${rect.left}px`
+  monthPicker.style.width = `${rect.width}px`
+
+
   monthPicker.style.visibility === 'hidden'
     ? monthPicker.style.visibility = 'visible'
     : monthPicker.style.visibility = 'hidden'
@@ -157,6 +179,13 @@ const toggleYear = function () {
     li.innerHTML = i
     yearPicker.appendChild(li)
   }
+
+  const currentYear = document.querySelector('.current-year')
+  const rect = currentYear.getBoundingClientRect()
+
+  yearPicker.style.top = `${rect.bottom + 7}px`
+  yearPicker.style.left = `${rect.left}px`
+  yearPicker.style.width = `${rect.width}px`
 
   yearPicker.style.visibility === 'hidden'
     ? yearPicker.style.visibility = 'visible'
