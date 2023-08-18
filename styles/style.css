@@ -83,7 +83,7 @@ body {
 .form-container {
   flex: 3.85 1 auto;
   background-color: var(--bg-color);
-  background-image: url("./images/user-icon.svg");
+  background-image: url("../images/user-icon.svg");
   background-position: bottom right;
   background-repeat: no-repeat;
   padding: 39px 22px 33px 21px;
@@ -148,17 +148,12 @@ label {
 
 .row {
   position: relative;
-  max-height: 42px;
   margin-top: 16px;
   z-index: 2;
 }
 
 .row:first-child {
   margin-top: 20px;
-}
-
-.row:nth-child(3) {
-  height: 43px;
 }
 
 .row:last-child {

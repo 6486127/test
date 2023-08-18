@@ -1,0 +1,96 @@
+@media only screen and (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    width: clamp(100%, 100%, 100%);
+    height: min(100vh, 100vh);
+  }
+
+  .title {
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+  }
+
+  .title>div {
+    top: 0;
+    left: 20px;
+    transform: rotate(0);
+  }
+
+  .current-month {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .title {
+    min-height: 70px;
+  }
+
+  .title>div {
+    font-size: calc(var(--title-text-size) * 0.7);
+  }
+
+  .form-container {
+    padding-top: 22px;
+    padding-bottom: 48px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col:nth-child(2) {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .gender-group {
+    margin-top: 10px;
+  }
+
+  .select-current {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .buttons {
+    margin-top: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+@media (min-width: 480px) and (max-width: 599px) {}
+
+@media (min-width: 600px) and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {}
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {}
+
+@media screen and (min-width: 1920px) {}
