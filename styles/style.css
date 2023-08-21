@@ -216,8 +216,6 @@ input {
   font-size: var(--secondary-text-size);
 }
 
-/* -----------------------*/
-
 
 /* custom select */
 .select {
@@ -259,34 +257,6 @@ input {
   cursor: pointer;
   background-color: var(--hover-color);
 }
-
-/* -----------------------*/
-
-
-/* more arrows */
-.select:after,
-.current-day:after,
-.current-month:after,
-.current-year:after {
-  content: '>';
-  font: 14px monospace;
-  color: var(--primary-text-color);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  right: 0;
-  top: 6px;
-  position: absolute;
-  pointer-events: none;
-  letter-spacing: 0.3px;
-}
-
-.current-year:after {
-  right: 1.4px;
-}
-
-/* -------------------- */
 
 
 /* custom date picker */
@@ -370,6 +340,7 @@ input {
   left: 49.6%;
 }
 
+
 /* --classes that were created with JS-- */
 .day-item,
 .month-item,
@@ -385,8 +356,6 @@ input {
   cursor: pointer;
   background-color: var(--hover-color);
 }
-
-/* -------------------- */
 
 
 /* custorm radio group */
@@ -463,7 +432,6 @@ input {
   margin-left: 18px;
 }
 
-/* -------------------- */
 
 /* password & confirm */
 .password>label,
@@ -471,7 +439,6 @@ input {
   font-weight: 300;
 }
 
-/* -------------------- */
 
 /* buttons */
 .buttons {
@@ -523,6 +490,41 @@ p.error {
   font-weight: 500;
 }
 
+/* more arrows */
+.select:after,
+.current-day:after,
+.current-month:after,
+.current-year:after {
+  content: '>';
+  font: 14px monospace;
+  color: var(--primary-text-color);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 0;
+  top: 6px;
+  position: absolute;
+  pointer-events: none;
+  letter-spacing: 0.3px;
+}
+
+.current-year:after {
+  right: 1.4px;
+}
+
+
+/* email checkmark */
+.email-checkmark {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 11px;
+  height: 8px;
+}
+
+
 /*focus effects*/
 input[type=text]:focus,
 input[type=email]:focus,
@@ -539,6 +541,7 @@ input[type=submit]:focus {
   outline-offset: 2px;
   outline: 1px solid var(--focus-color);
 }
+
 
 /*animations: shake*/
 .shake {

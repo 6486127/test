@@ -347,6 +347,7 @@ const nameCheck = (field) => {
 const emailCheck = (field, value, p) => {
   //simple check just to introduce functionality
   const reg = /@/
+  const checkmark = document.querySelector('.email-checkmark')
 
   field.onfocus = () => removeError(field, p)
 
@@ -354,7 +355,12 @@ const emailCheck = (field, value, p) => {
     setError(field, p, 'invalid email')
   } else {
     removeError(field, p)
+    // checkmark.style.display = 'block'
   }
+
+  field.classList.contains('error')
+    ? checkmark.style.display = 'none'
+    : checkmark.style.display = 'block'
 }
 
 //utils: password check
