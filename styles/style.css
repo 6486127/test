@@ -235,6 +235,9 @@ input[type=email] {
 
 .select-current {
   font-size: var(--primary-text-size);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -247,6 +250,9 @@ input[type=email] {
   overflow-y: scroll;
   background-color: var(--bg-color);
   box-shadow: 2px 2px 7px var(--shadow-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 5;
 }
@@ -272,9 +278,6 @@ input[type=email] {
   content: '>';
   font: 14px monospace;
   color: var(--primary-text-color);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   right: 0;
   top: 6px;
@@ -305,6 +308,9 @@ input[type=email] {
   font-family: "Work Sans";
   font-size: var(--primary-text-size);
   border-bottom: 0.7px solid var(--border-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -355,6 +361,9 @@ input[type=email] {
   overflow-y: scroll;
   background-color: var(--bg-color);
   box-shadow: 2px 2px 7px var(--shadow-color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   z-index: 5;
 }
@@ -550,7 +559,30 @@ input[type=submit]:focus {
 
 /*animations: shake*/
 .shake {
+  -webkit-animation: horizontal-shake 0.2s 2;
   animation: horizontal-shake 0.2s 2;
+}
+
+@-webkit-keyframes horizontal-shake {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(2px)
+  }
+
+  50% {
+    transform: translateX(0)
+  }
+
+  75% {
+    transform: translateX(-2px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
 }
 
 @keyframes horizontal-shake {
@@ -578,7 +610,20 @@ input[type=submit]:focus {
 
 /*animations: emersion */
 .emersion {
+  -webkit-animation: emersion 1s;
   animation: emersion 1s;
+}
+
+@-webkit-keyframes emersion {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes emersion {
