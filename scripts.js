@@ -309,7 +309,6 @@ const monthNormalize = (str) => {
       } else {
         return `0${i + 1}`
       }
-
     }
   }
 }
@@ -417,6 +416,7 @@ const formHandler = async () => {
 
       //reset values for all fields
       document.querySelector('#form').reset()
+      document.querySelector('input[name=gender]:checked').removeAttribute('checked')
 
       const btn = document.querySelector('.submit-btn')
       const form = document.querySelector('.form')
