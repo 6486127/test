@@ -334,6 +334,8 @@ const nameCheck = (field) => {
   value = name.value
   p = document.querySelector(`.error-message-${field}`)
 
+  name.onfocus = () => removeError(name, p)
+
   if (value.length > 0) {
     name.value = nameNormalize(value)
     checkForNumbers(name, value, p)
@@ -347,6 +349,8 @@ const emailCheck = (field, value, p) => {
   //simple check just to introduce functionality
   const reg = /@/
 
+  field.onfocus = () => removeError(field, p)
+
   if (!reg.test(value)) {
     setError(field, p, 'invalid email')
   } else {
@@ -359,6 +363,8 @@ const passwordCheck = (field, value, p) => {
   const upperCase = /[A-Z]/
   const lowerCase = /[a-z]/
   const numbers = /[0-9]/
+
+  field.onfocus = () => removeError(field, p)
 
   if (value.length < 8) {
     setError(field, p, 'your password must be at least 8 characters')
@@ -374,6 +380,8 @@ const passwordCheck = (field, value, p) => {
 }
 //utils: confirm check
 const confirmCheck = (field, passwordValue, confirmValue, p) => {
+  field.onfocus = () => removeError(field, p)
+
   if (passwordValue !== confirmValue) {
     setError(field, p, 'passwords mismatch')
   } else {

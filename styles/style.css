@@ -503,6 +503,7 @@ input[type=submit]:disabled {
 
 input.error {
   border-bottom: 2px solid var(--error-color);
+  color: var(--error-color);
 }
 
 p.error {
@@ -515,6 +516,7 @@ p.error {
   font-family: "Work Sans";
   font-weight: 300;
   font-size: var(--option-text-size);
+  padding-right: 10px;
 }
 
 .login span {
