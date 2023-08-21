@@ -235,10 +235,22 @@ const formHandler = async () => {
         console.log(`${pair[0]}: ${pair[1]}`)
       }
 
-      //reset values for all fields
+      //clear all fields
       document.querySelector('#form').reset()
-      document.querySelector('input[name=gender]:checked').removeAttribute('checked')
+      document.querySelector('.select-current').setAttribute('value', 'American')
       document.querySelector('.email-checkmark').setAttribute('style', 'display: none')
+      document.querySelector('input[name=gender]:checked').removeAttribute('checked')
+
+      const day = document.querySelector('#current-day')
+      const month = document.querySelector('#current-month')
+      const year = document.querySelector('#current-year')
+
+      day.setAttribute('value', '21')
+      day.innerHTML = '21'
+      month.setAttribute('value', 'December')
+      month.innerHTML = 'December'
+      year.setAttribute('value', '1995')
+      year.innerHTML = '1995'
 
       const btn = document.querySelector('.submit-btn')
       const form = document.querySelector('.form')
