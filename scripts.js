@@ -20,7 +20,7 @@ const closeAllFields = function () {
   dayPicker.style.visibility = 'hidden'
   monthPicker.style.visibility = 'hidden'
   yearPicker.style.visibility = 'hidden'
-  successOverlay.style.display = 'none'
+  successOverlay ? successOverlay.style.display = 'none' : null
 
   hideOverlay()
 }
@@ -466,8 +466,6 @@ const emersion = () => {
   }
 }
 
-window.addEventListener('load', emersion)
-
 //submit form by hitting Enter
 const handleEnterClick = () => {
   const btn = document.querySelector('.submit-btn')
@@ -477,3 +475,6 @@ const handleEnterClick = () => {
     }
   })
 }
+
+window.addEventListener('load', emersion)
+window.addEventListener('resize', () => closeAllFields())

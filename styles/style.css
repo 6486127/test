@@ -172,7 +172,12 @@ input {
   border: none;
   border-bottom: 0.7px solid var(--border-color);
   background-color: transparent;
+  text-overflow: ellipsis;
   letter-spacing: 0;
+}
+
+input[type=email] {
+  padding-right: 15px;
 }
 
 
@@ -258,6 +263,29 @@ input {
   background-color: var(--hover-color);
 }
 
+
+/* more arrows */
+.select:after,
+.current-day:after,
+.current-month:after,
+.current-year:after {
+  content: '>';
+  font: 14px monospace;
+  color: var(--primary-text-color);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 0;
+  top: 6px;
+  position: absolute;
+  pointer-events: none;
+  letter-spacing: 0.3px;
+}
+
+.current-year:after {
+  right: 1.4px;
+}
 
 /* custom date picker */
 .date-picker {
@@ -488,29 +516,6 @@ p.error {
 
 .login span {
   font-weight: 500;
-}
-
-/* more arrows */
-.select:after,
-.current-day:after,
-.current-month:after,
-.current-year:after {
-  content: '>';
-  font: 14px monospace;
-  color: var(--primary-text-color);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  right: 0;
-  top: 6px;
-  position: absolute;
-  pointer-events: none;
-  letter-spacing: 0.3px;
-}
-
-.current-year:after {
-  right: 1.4px;
 }
 
 
