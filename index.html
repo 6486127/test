@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Signup form for test assignment">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <title>Sign up</title>
+</head>
+
+<body>
+  <div class="overlay" onclick="closeAllFields()"></div>
+  <div class="container">
+    <div class="title">
+      <div>Sign up</div>
+    </div>
+    <div class="form-container">
+      <div class="form">
+        <div class="success-overlay">
+          <div class="header thanks">Thank you!</div>
+          <div class="description thanks">you registered!</div>
+        </div>
+        <div>
+          <div class="new-user">
+            <p class="header">New user?</p>
+            <p class="description">Use the form below to create your account.</p>
+          </div>
+          <form id="form">
+            <div class="row">
+              <div class="col first-name">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" onblur="validate('first-name')" value>
+                <p class="error-message-first-name"></p>
+              </div>
+              <div class="col last-name">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" onblur="validate('last-name')" value>
+                <p class="error-message-last-name"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col nationality">
+                <label for="nationality">Nationality</label>
+                <div class="select" onclick="toggleSelect()">
+                  <div class="select-current" value="American">American</div>
+                </div>
+              </div>
+              <div class="col email">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" onblur="validate('email')" value>
+                <img src="./images/checkmark.svg" class="email-checkmark" alt="checkmark">
+                <p class="error-message-email"></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col date-birth">
+                <label for="date-birth">Date of Birth</label>
+                <div class="date-picker">
+                  <div class="current-day" id="current-day" onclick="toggleDay()" value="21">21</div>
+                  <div class="current-month" id="current-month" onclick="toggleMonth()" value="December">
+                    December</div>
+                  <div class="current-year" id="current-year" onclick="toggleYear()" value="1995">1995
+                  </div>
+                </div>
+              </div>
+              <div class="col gender">
+                <label for="gender">Gender</label>
+                <div class="gender-group">
+                  <label class="radio-container">
+                    <input type="radio" id="male" class="gender-radio" value="Male" name="gender"
+                      onclick="setRadioChecked('male')">
+                    <span class="checkmark" id="male-checkmark"></span>
+                    <span class="gender-description">Male</span>
+                  </label>
+                  <label class="radio-container">
+                    <input type="radio" id="female" class="gender-radio" value="Female" name="gender"
+                      onclick="setRadioChecked('female')">
+                    <span class="checkmark" id="female-checkmark"></span>
+                    <span class="gender-description">Female</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col password">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" autocomplete="password"
+                  onblur="validate('password')" value>
+                <p class="error-message-password"></p>
+              </div>
+              <div class="col confirm">
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm" name="confirm" autocomplete="confirm" onblur="validate('confirm')"
+                  value>
+                <p class="error-message-confirm"></p>
+              </div>
+            </div>
+            <div class="select-picker" id="select-picker" onblur="closeAllFields()">
+              <div class="select-item" value="American">American</div>
+              <div class="select-item" value="Belarus">Belarus</div>
+              <div class="select-item" value="Czech">Czech</div>
+              <div class="select-item" value="English">English</div>
+              <div class="select-item" value="German">German</div>
+              <div class="select-item" value="Italian">Italian</div>
+            </div>
+            <ul class="day-picker" id="day-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <ul class="month-picker" id="month-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+            <ul class="year-picker" id="year-picker" style="visibility: hidden;" onblur="closeAllFields()"></ul>
+          </form>
+        </div>
+        <div class="buttons">
+          <p class="login">Have an account? <a href="#"><span>Login</span></a></p>
+          <input type="submit" value="Complete Signup" class="submit-btn" onclick="formHandler()">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/validation.js"></script>
+  <script src="./scripts/handlers.js"></script>
+  <script src="./scripts/animations.js"></script>
+  <script src="./scripts/assets.js"></script>
+</body>
+
+</html>
